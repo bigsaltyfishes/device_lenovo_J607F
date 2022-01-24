@@ -423,6 +423,11 @@ PRODUCT_PACKAGES += \
     codec2.vendor.ext-arm64.policy \
     codec2.vendor.base-arm64.policy
 
+# Codec2 modules
+PRODUCT_PACKAGES += \
+    com.android.media.swcodec \
+    libsfplugin_ccodec
+
 # Media codecs C2
 PRODUCT_PACKAGES += \
     codec2play \
