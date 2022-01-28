@@ -18,17 +18,20 @@
 -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-   <!-- Height of the status bar -->
-   <dimen name="status_bar_height_portrait">36.0dip</dimen>
+     <!-- Height of the status bar -->
+     <dimen name="status_bar_height_portrait">36.0dip</dimen>
 
-   <!-- Radius of the software rounded corners at the top of the display in its natural
+     <!-- for 18dp of padding at 2.75px/dp at default density -->
+     <dimen name="rounded_corner_content_padding">0.0px</dimen>
+
+     <!-- Radius of the software rounded corners at the top of the display in its natural
         orientation. If zero, the value of rounded_corner_radius is used. -->
-   <dimen name="rounded_corner_radius_top">0.0dip</dimen>
+     <dimen name="rounded_corner_radius_top">0.0dip</dimen>
 
-   <!-- Radius of the software rounded corners at the bottom of the display in its natural
+     <!-- Radius of the software rounded corners at the bottom of the display in its natural
         orientation. If zero, the value of rounded_corner_radius is used. -->
-   <dimen name="rounded_corner_radius_bottom">0.0dip</dimen>
+     <dimen name="rounded_corner_radius_bottom">0.0dip</dimen>
 
-   <!-- Default radius of the software rounded corners. -->
-   <dimen name="rounded_corner_radius">0.0dip</dimen>
+     <!-- Default radius of the software rounded corners. -->
+     <dimen name="rounded_corner_radius">0.0dip</dimen>
 </resources> 
