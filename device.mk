@@ -285,6 +285,7 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml
+
 # IRSC
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
@@ -292,9 +293,15 @@ PRODUCT_COPY_FILES += \
 # Keystore
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor
+
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-service.lenovo_arnoz
+
 # LiveDisplay
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service-sdm
+
 # Media
 PRODUCT_PACKAGES += \
     libavservices_minijail \
