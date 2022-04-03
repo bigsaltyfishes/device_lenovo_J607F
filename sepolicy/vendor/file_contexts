@@ -12,6 +12,10 @@
 # EFS Block devices
 /dev/block/sde[0-9]	                                                    u:object_r:efs_block_device:s0
 
+# Dolby
+/data/vendor/dolby(/.*)?                                                u:object_r:vendor_audio_data_file:s0
+/vendor/bin/hw/vendor\.dolby\.hardware\.dms@2\.0-service                u:object_r:hal_dms_default_exec:s0
+
 # Hexagon DSP-side executable needed for Halide operation
 # This is labeled as public_adsprpcd_file as it needs to be read by apps
 # (e.g. Google Camera App)
