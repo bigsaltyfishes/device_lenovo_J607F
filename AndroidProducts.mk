@@ -5,8 +5,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_J607F.mk
+    $(LOCAL_DIR)/arrow_J607F.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_gauguin-userdebug \
-    aosp_gauguin-eng
+    arrow_J607F-userdebug \
+    arrow_J607F-eng
