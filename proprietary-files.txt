@@ -5,13 +5,13 @@ vendor/bin/adsprpcd
 vendor/lib/libadsprpc.so
 vendor/lib/libadsp_default_listener.so
 vendor/lib/libfastcvdsp_stub.so
-vendor/lib/libfastcvopt.so
+-vendor/lib/libfastcvopt.so
 vendor/lib/libmdsprpc.so
 vendor/lib/libsdsprpc.so
 vendor/lib64/libadsprpc.so
 vendor/lib64/libadsp_default_listener.so
 vendor/lib64/libfastcvdsp_stub.so
-vendor/lib64/libfastcvopt.so
+-vendor/lib64/libfastcvopt.so
 vendor/lib64/libmdsprpc.so
 vendor/lib64/libsdsprpc.so
 
@@ -903,10 +903,10 @@ vendor/lib64/vendor.qti.esepowermanager@1.1.so
 # FM
 system_ext/lib/fm_helium.so
 system_ext/lib/libfm-hci.so
-system_ext/lib/vendor.qti.hardware.fm@1.0.so
+-system_ext/lib/vendor.qti.hardware.fm@1.0.so
 system_ext/lib64/fm_helium.so
 system_ext/lib64/libfm-hci.so
-system_ext/lib64/vendor.qti.hardware.fm@1.0.so
+-system_ext/lib64/vendor.qti.hardware.fm@1.0.so
 vendor/bin/fm_qsoc_patches
 vendor/lib/ftm_fm_lib.so
 vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so
@@ -1293,7 +1293,6 @@ vendor/lib/libOmxSwVdec.so
 vendor/lib/libOmxSwVencMpeg4.so
 vendor/lib/libOmxVdec.so
 vendor/lib/libOmxVenc.so
--vendor/lib/libplatformconfig.so
 vendor/lib/libstagefrighthw.so
 vendor/lib64/libc2dcolorconvert.so
 vendor/lib64/libmm-omxcore.so
@@ -1307,7 +1306,6 @@ vendor/lib64/libOmxSwVdec.so
 vendor/lib64/libOmxSwVencMpeg4.so
 vendor/lib64/libOmxVdec.so
 vendor/lib64/libOmxVenc.so
--vendor/lib64/libplatformconfig.so
 vendor/lib64/libstagefrighthw.so
 
 # NFC
@@ -2030,8 +2028,8 @@ vendor/etc/init/android.hardware.thermal@2.0-service.qti.rc
 vendor/etc/init/init_thermal-engine.rc
 vendor/etc/thermal-engine.conf
 -vendor/etc/vintf/manifest/android.hardware.thermal@2.0-service.qti.xml
-vendor/lib/libthermalclient.so
-vendor/lib64/libthermalclient.so
+-vendor/lib/libthermalclient.so
+-vendor/lib64/libthermalclient.so
 
 # Time
 -vendor/app/TimeService/TimeService.apk
