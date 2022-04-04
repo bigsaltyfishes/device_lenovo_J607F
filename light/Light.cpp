@@ -23,7 +23,6 @@
 #include <fstream>
 
 #define LCD_LED         "/sys/class/backlight/panel0-backlight/"
-#define WHITE_LED       NULL
 
 #define BREATH          "breath"
 #define BRIGHTNESS      "brightness"
@@ -92,6 +91,7 @@ static void handleBacklight(const LightState& state) {
 
 static void handleNotification(const LightState& state) {
     /* Lenovo Xiaoxin Pad Plus and Lenovo P11 5G do not have Breathing LED */
+    getScaledBrightness(state, MAX_LCD_BRIGHTNESS);
     return;
 }
 
