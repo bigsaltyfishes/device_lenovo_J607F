@@ -50,6 +50,9 @@
 # USB
 /vendor/bin/init\.qcom\.usb\.sh                                           u:object_r:vendor_qti_init_shell_exec:s0
 
+# Power HAL
+/(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.3-service\.lenovo_arnoz-libperfmgr                         u:object_r:hal_power_default_exec:s0
+
 # Vibrator
 /vendor/bin/hw/vendor\.qti\.hardware\.vibrator\.service\.lenovo_arnoz   u:object_r:hal_vibrator_default_exec:s0
 
