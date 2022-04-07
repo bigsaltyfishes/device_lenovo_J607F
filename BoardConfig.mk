@@ -4,11 +4,16 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
+BOARD_VENDOR := lenovo
+
 DEVICE_PATH := device/lenovo/J607F
 
 # A/B
-BOARD_USES_RECOVERY_AS_BOOT := false
-BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
+BOARD_USES_RECOVERY_AS_BOOT := true
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 AB_OTA_UPDATER := true
 
 AB_OTA_PARTITIONS += \
@@ -19,6 +24,9 @@ AB_OTA_PARTITIONS += \
     system \
     system_ext \
     vendor
+
+# APEX
+DEXPREOPT_GENERATE_APEX_IMAGE := true
 
 # Architecture
 TARGET_ARCH := arm64
@@ -49,11 +57,9 @@ TARGET_BOOTLOADER_BOARD_NAME := lito
 TARGET_NO_BOOTLOADER := true
 
 # Kernel
+BOARD_BOOTIMG_HEADER_VERSION:= 2
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8 earlycon=msm_geni_serial,0x888000 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 androidboot.usbcontroller=a600000.dwc3 swiotlb=2048 cgroup.memory=nokmem,nosocket loop.max_part=7 buildvariant=user
 BOARD_KERNEL_IMAGE_NAME := Image
-BOARD_KERNEL_BASE := 0x00000000
-BOARD_RAMDISK_OFFSET := 0x01000000
-BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
@@ -65,6 +71,7 @@ TARGET_KERNEL_CONFIG := vendor/arnoz_prc_lte-perf_defconfig
 
 # Platform
 TARGET_BOARD_PLATFORM := lito
+TARGET_USES_HARDWARE_QCOM_BOOTCTRL := true
 
 # Audio
 AUDIO_FEATURE_ENABLED_EXTENDED_COMPRESS_FORMAT := true
@@ -101,6 +108,8 @@ BOARD_HAVE_QCOM_FM := true
 BOARD_HAVE_QCOM_FM := true
 
 # HIDL
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+    vendor/aosp/config/device_framework_matrix.xml
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 
@@ -165,7 +174,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
 # RIL
-ENABLE_VENDOR_RIL_SERVICE := true
+ENABLE_VENDOR_RIL_SERVICE := false
 
 # Security patch level
 VENDOR_SECURITY_PATCH := 2021-12-01
