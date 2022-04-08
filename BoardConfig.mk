@@ -12,8 +12,7 @@ BOARD_VENDOR := lenovo
 DEVICE_PATH := device/lenovo/J607F
 
 # A/B
-BOARD_USES_RECOVERY_AS_BOOT := true
-BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+BOARD_USES_RECOVERY_AS_BOOT := false
 AB_OTA_UPDATER := true
 
 AB_OTA_PARTITIONS += \
@@ -109,7 +108,7 @@ BOARD_HAVE_QCOM_FM := true
 
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
-    vendor/aosp/config/device_framework_matrix.xml
+    $(DEVICE_PATH)/frameworks_compatibility_matrix.xml
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 
