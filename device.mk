@@ -181,6 +181,7 @@ PRODUCT_COPY_FILES += \
 # Cryptfshw
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.cryptfshw@1.0.vendor
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
@@ -209,8 +210,8 @@ PRODUCT_PACKAGES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.3-service.clearkey \
-    android.hardware.drm@1.3-service.widevine
+    android.hardware.drm@1.3.vendor \
+    android.hardware.drm@1.4-service.clearkey
 
 # Fastbootd
 PRODUCT_PACKAGES += \
@@ -364,8 +365,10 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti \
     android.hardware.power@1.3-service.lenovo_arnoz-libperfmgr \
+    android.hardware.power@1.2.vendor \
+    libqti-perfd-client \
+    libperfmgr 
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
