@@ -71,6 +71,8 @@ TARGET_MODULE_ALIASES += \
     adsp_loader_dlkm.ko:audio_adsp_loader.ko \
     apr_dlkm.ko:audio_apr.ko \
     bolero_cdc_dlkm.ko:audio_bolero_cdc.ko \
+    cirrus_cs35l41_dlkm.ko:audio_cirrus_cs35l41.ko \
+    cirrus_wm_adsp_dlkm.ko:audio_cirrus_wm_adsp.ko \
     hdmi_dlkm.ko:audio_hdmi.ko \
     machine_dlkm.ko:audio_machine_lito.ko \
     mbhc_dlkm.ko:audio_mbhc.ko \
@@ -83,8 +85,8 @@ TARGET_MODULE_ALIASES += \
     rx_macro_dlkm.ko:audio_rx_macro.ko \
     snd_event_dlkm.ko:audio_snd_event.ko \
     stub_dlkm.ko:audio_stub.ko \
-    swr_ctrl_dlkm.ko:audio_swr_ctrl.ko \
     swr_dlkm.ko:audio_swr.ko \
+    swr_ctrl_dlkm.ko:audio_swr_ctrl.ko \
     tx_macro_dlkm.ko:audio_tx_macro.ko \
     usf_dlkm.ko:audio_usf.ko \
     va_macro_dlkm.ko:audio_va_macro.ko \

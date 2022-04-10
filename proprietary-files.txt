@@ -1135,7 +1135,7 @@ vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
 # RIL
 etc/permissions/privapp-permissions-qti.xml
 etc/sysconfig/qti_whitelist.xml
--system_ext/app/DeviceInfo/DeviceInfo.apk
+-system_ext/app/DeviceInfo/DeviceInfo.apk|feb8408ac0d946c39eef266e22017a1514cee4c8
 product/etc/permissions/telephony_product_privapp-permissions-qti.xml
 system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
 -system_ext/app/datastatusnotification/datastatusnotification.apk
@@ -1592,7 +1592,7 @@ vendor/lib64/libscveObjectTracker_stub.so
 vendor/lib64/libscveObjectTracker.so
 
 # Soter
--system/app/SoterService/SoterService.apk
+-system/app/SoterService/SoterService.apk|190f9d38c5a7323a3dc012c362f1e0873cb4db20
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
 vendor/bin/vendor.qti.hardware.soter@1.0-provision
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
@@ -1741,8 +1741,6 @@ vendor/lib/libqmi_legacy.so
 vendor/bin/diag_mdlog
 vendor/bin/ipacm-diag
 vendor/lib64/libqsap_sdk.so
-framework/moto-telephony.jar:system_ext/framework/moto-telephony.jar
-etc/permissions/moto-telephony.xml:system_ext/etc/permissions/moto-telephony.xml
 product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml
 product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml
 system_ext/framework/vendor.qti.ims.factory-V1.0-java.jar
