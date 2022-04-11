@@ -29,3 +29,7 @@ persist.vendor.ssr.restart_level=ALL_ENABLE
 
 # Vendor
 ro.vendor.qti.va_aosp.support=1
+
+# Bluetooth
+ro.bluetooth.library_name=libbluetooth_qti.so
+persist.vendor.btstack.aac_frm_ctl.enabled=true

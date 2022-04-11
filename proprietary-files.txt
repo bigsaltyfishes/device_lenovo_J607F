@@ -207,6 +207,7 @@ vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
 vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
 vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
+vendor/lib/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
 vendor/lib/libbt-hidlclient.so
 vendor/lib/libbtnv.so
@@ -215,6 +216,7 @@ vendor/lib/vendor.qti.hardware.bluetooth_sar@1.1.so
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
 vendor/lib64/libbt-hidlclient.so
 vendor/lib64/libbtnv.so
@@ -1578,6 +1580,9 @@ vendor/etc/sensors/sns_reg_config
 -system_ext/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar
 vendor/bin/hw/android.hardware.sensors@2.0-service.multihal
 vendor/bin/sensors.qti
+/vendor/bin/init.qcom.sensors.sh
+vendor/bin/sscrpcd
+vendor/etc/sensors/hals.conf
 vendor/etc/init/android.hardware.sensors@2.0-service-multihal.rc
 -vendor/etc/vintf/manifest/android.hardware.sensors@2.0-multihal.xml
 vendor/etc/init/init.vendor.sensors.rc
@@ -1596,6 +1601,12 @@ vendor/lib64/libsensorndkbridge.so
 vendor/lib64/libsensorslog.so
 vendor/lib64/libssc.so
 vendor/lib64/libssc_default_listener.so
+vendor/lib64/sensors.ssc.so
+vendor/lib64/libsnsapi.so
+vendor/lib64/libsns_device_mode_stub.so
+vendor/lib64/libsnsdiaglog.so
+vendor/lib64/libsns_fastRPC_util.so
+vendor/lib64/libsns_low_lat_stream_stub.so
 vendor/lib64/sensors.ssc.so
 
 # Snapdragon Computer Vision Engine
