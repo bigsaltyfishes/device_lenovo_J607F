@@ -71,8 +71,6 @@ TARGET_MODULE_ALIASES += \
     adsp_loader_dlkm.ko:audio_adsp_loader.ko \
     apr_dlkm.ko:audio_apr.ko \
     bolero_cdc_dlkm.ko:audio_bolero_cdc.ko \
-    cirrus_cs35l41_dlkm.ko:audio_cirrus_cs35l41.ko \
-    cirrus_wm_adsp_dlkm.ko:audio_cirrus_wm_adsp.ko \
     hdmi_dlkm.ko:audio_hdmi.ko \
     machine_dlkm.ko:audio_machine_lito.ko \
     mbhc_dlkm.ko:audio_mbhc.ko \
@@ -98,11 +96,11 @@ TARGET_MODULE_ALIASES += \
     wcd_core_dlkm.ko:audio_wcd_core.ko \
     wsa881x_dlkm.ko:audio_wsa881x.ko \
     wsa883x_dlkm.ko:audio_wsa883x.ko \
+    snd-soc-cs35l41-spi.ko:cirrus_cs35l41-spi.ko \
+    snd-soc-cs35l41-i2c.ko:cirrus_cs35l41-i2c.ko \
+    snd-soc-cs35l41.ko:cirrus_cs35l41.ko \
+    snd-soc-wm-adsp.ko:cirrus_wm_adsp.ko \
     wsa_macro_dlkm.ko:audio_wsa_macro.ko
-
-# Kernel modules - WLAN
-TARGET_MODULE_ALIASES += \
-    wlan.ko:qca_cld3_wlan.ko
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
