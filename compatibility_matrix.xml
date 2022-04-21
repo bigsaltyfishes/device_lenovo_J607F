@@ -68,11 +68,11 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
-        <name>vendor.qti.hardware.wifi.keystore</name>
+        <name>vendor.qti.hardware.sigma_miracast</name>
         <version>1.0</version>
         <interface>
-            <name>IKeystoreExt</name>
-            <instance>default</instance>
+            <name>Isigma_miracast</name>
+            <instance>sigmahal</instance>
         </interface>
     </hal>
 </compatibility-matrix>

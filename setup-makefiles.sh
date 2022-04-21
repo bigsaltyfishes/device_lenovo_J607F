@@ -8,8 +8,8 @@
 
 set -e
 
-DEVICE=gauguin
-VENDOR=xiaomi
+DEVICE=J607F
+VENDOR=lenovo
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"

@@ -55,7 +55,7 @@ TARGET_NO_BOOTLOADER := true
 
 # Kernel
 BOARD_BOOTIMG_HEADER_VERSION:= 2
-BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8 earlycon=msm_geni_serial,0x888000 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 androidboot.usbcontroller=a600000.dwc3 swiotlb=2048 cgroup.memory=nokmem,nosocket loop.max_part=7 buildvariant=user
+BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8 earlycon=msm_geni_serial,0x888000 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 androidboot.usbcontroller=a600000.dwc3 swiotlb=2048 cgroup.memory=nokmem,nosocket loop.max_part=7
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DTBO := true
@@ -64,15 +64,13 @@ TARGET_KERNEL_ADDITIONAL_FLAGS := DTC_EXT=$(shell pwd)/prebuilts/misc/$(HOST_OS)
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/lenovo/J607Z
-TARGET_KERNEL_CONFIG := vendor/arnoz_prc_lte-perf_defconfig
+TARGET_KERNEL_CONFIG := vendor/arnoz_row_lte-perf_defconfig
 
 # Kernel modules - Audio
 TARGET_MODULE_ALIASES += \
     adsp_loader_dlkm.ko:audio_adsp_loader.ko \
     apr_dlkm.ko:audio_apr.ko \
     bolero_cdc_dlkm.ko:audio_bolero_cdc.ko \
-    cirrus_cs35l41_dlkm.ko:audio_cirrus_cs35l41.ko \
-    cirrus_wm_adsp_dlkm.ko:audio_cirrus_wm_adsp.ko \
     hdmi_dlkm.ko:audio_hdmi.ko \
     machine_dlkm.ko:audio_machine_lito.ko \
     mbhc_dlkm.ko:audio_mbhc.ko \
@@ -98,11 +96,11 @@ TARGET_MODULE_ALIASES += \
     wcd_core_dlkm.ko:audio_wcd_core.ko \
     wsa881x_dlkm.ko:audio_wsa881x.ko \
     wsa883x_dlkm.ko:audio_wsa883x.ko \
+    snd-soc-cs35l41-spi.ko:cirrus_cs35l41-spi.ko \
+    snd-soc-cs35l41-i2c.ko:cirrus_cs35l41-i2c.ko \
+    snd-soc-cs35l41.ko:cirrus_cs35l41.ko \
+    snd-soc-wm-adsp.ko:cirrus_wm_adsp.ko \
     wsa_macro_dlkm.ko:audio_wsa_macro.ko
-
-# Kernel modules - WLAN
-TARGET_MODULE_ALIASES += \
-    wlan.ko:qca_cld3_wlan.ko
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
@@ -230,7 +228,7 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 ENABLE_VENDOR_RIL_SERVICE := false
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2021-12-01
+VENDOR_SECURITY_PATCH := 2022-02-05
 
 # SELinux
 include device/qcom/sepolicy_vndr/SEPolicy.mk
@@ -262,4 +260,4 @@ WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit from the proprietary version
-include vendor/lenovo/J607F/BoardConfigVendor.mk
+include vendor/lenovo/J607Z/BoardConfigVendor.mk

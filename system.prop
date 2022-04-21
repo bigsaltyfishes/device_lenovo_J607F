@@ -2,7 +2,7 @@
 ro.charger.enable_suspend = 1
 
 # Camera
-vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.zui.camera,org.lineageos.snap,com.android.camera
+vendor.camera.aux.packagelist=org.codeaurora.snapcam,org.lineageos.snap,com.android.camera
 
 # CNE
 persist.vendor.cne.feature=1
@@ -29,3 +29,7 @@ persist.vendor.ssr.restart_level=ALL_ENABLE
 
 # Vendor
 ro.vendor.qti.va_aosp.support=1
+
+# Bluetooth
+ro.bluetooth.library_name=libbluetooth_qti.so
+persist.vendor.btstack.aac_frm_ctl.enabled=true
