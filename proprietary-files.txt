@@ -242,9 +242,10 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 vendor/lib/hw/audio.bluetooth_qti.default.so
 vendor/lib/btaudio_offload_if.so
 vendor/lib/libbluetooth_audio_session_qti.so
-vendor/lib64/hw/audio.bluetooth_qti.default.so
+vendor/lib/libbluetooth_audio_session_qti_2_1.so
 vendor/lib64/btaudio_offload_if.so
 vendor/lib64/libbluetooth_audio_session_qti.so
+vendor/lib64/libbluetooth_audio_session_qti_2_1.s
 vendor/lib64/libsoc_helper.so
 
 # Bluetooth (aptX) - from sunfish RQ1A.201205.008
