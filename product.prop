@@ -9,3 +9,8 @@ audio.offload.video=true
 audio.deep_buffer.media=true
 ro.af.client_heap_size_kbyte=7168
 media.stagefright.audio.deep=false
+
+# Enable blurs, hidden under dev option
+ro.surface_flinger.supports_background_blur=1
+persist.sys.sf.disable_blurs=1
+ro.sf.blurs_are_expensive=1
