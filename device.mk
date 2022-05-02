@@ -16,6 +16,8 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/lenovo/J607Z/J607Z-vendor.mk)
 
+PRODUCT_CHARACTERISTICS := tablet
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
@@ -169,11 +171,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.btconfigstore@2.0.vendor \
     libldacBT_bco
 
-# Config Store
-PRODUCT_PACKAGES += \
-    android.hardware.configstore@1.0-service \
-    android.hardware.configstore@1.1-service 
-
 # Camera
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0 \
@@ -320,10 +317,6 @@ PRODUCT_COPY_FILES += \
 # Keystore
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor
-
-# Lights
-PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.lenovo_arnoz
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
