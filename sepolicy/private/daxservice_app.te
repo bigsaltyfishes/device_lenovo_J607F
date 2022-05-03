@@ -1,8 +1,0 @@
-app_domain(daxservice_app)
-
-allow daxservice_app {
-  activity_service
-  audio_service
-  audioserver_service
-  bluetooth_manager_service
-}:service_manager find;
