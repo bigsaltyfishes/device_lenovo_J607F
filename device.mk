@@ -16,6 +16,8 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/lenovo/J607Z/J607Z-vendor.mk)
 
+PRODUCT_CHARACTERISTICS := tablet
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
@@ -152,21 +154,22 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/a2dp_in_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
-    $(LOCAL_PATH)/audio/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
-    $(LOCAL_PATH)/audio/bluetooth_qti_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_qti_audio_policy_configuration.xml \
-    $(LOCAL_PATH)/audio/bluetooth_qti_hearing_aid_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_qti_hearing_aid_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/hearing_aid_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/hearing_aid_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
-    frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xm
+    frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
 
 # Bluetooth
 PRODUCT_PACKAGES += \
     liba2dpoffload \
     android.hardware.bluetooth@1.0.vendor \
-    android.hardware.bluetooth.audio@2.0-impl \
+    android.hardware.bluetooth.audio@2.1-impl \
+    libbthost_if \
     vendor.qti.hardware.bluetooth_audio@2.0.vendor \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
     vendor.qti.hardware.btconfigstore@2.0.vendor \
-    vendor.qti.hardware.btconfigstore@2.0
+    libldacBT_bco
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -314,10 +317,6 @@ PRODUCT_COPY_FILES += \
 # Keystore
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor
-
-# Lights
-PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.lenovo_arnoz
 
 # LiveDisplay
 PRODUCT_PACKAGES += \

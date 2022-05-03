@@ -1,26 +1,10 @@
 <compatibility-matrix version="2.0" type="framework">
     <hal format="hidl" optional="true">
-        <name>android.hardware.configstore</name>
-        <version>1.0-1</version>
-        <interface>
-            <name>ISurfaceFlingerConfigs</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
         <name>android.hardware.gnss</name>
         <version>1.0</version>
         <interface>
             <name>IGnss</name>
             <instance>gnss_vendor</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>android.hardware.light</name>
-        <version>2.0</version>
-        <interface>
-            <name>ILight</name>
-            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -58,7 +42,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.bluetooth.audio</name>
-        <version>2.0</version>
+        <version>2.0-1</version>
         <interface>
             <name>IBluetoothAudioProvidersFactory</name>
             <instance>default</instance>
@@ -157,7 +141,7 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.qti.hardware.bluetooth_audio</name>
-        <version>2.0</version>
+        <version>2.0-1</version>
         <interface>
             <name>IBluetoothAudioProvidersFactory</name>
             <instance>default</instance>
@@ -467,6 +451,18 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
+        <name>android.hardware.drm</name>
+        <version>1.0-4</version>
+        <interface>
+            <name>ICryptoFactory</name>
+            <instance>clearkey</instance>
+        </interface>
+        <interface>
+            <name>IDrmFactory</name>
+            <instance>clearkey</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>android.hardware.gnss</name>
         <version>2.0-1</version>
         <interface>
@@ -519,10 +515,16 @@
     </hal>
     <hal format="aidl" optional="true">
         <name>android.hardware.vibrator</name>
-        <fqname>IVibrator/default</fqname>
+        <interface>
+            <name>IVibrator</name>
+            <instance>default</instance>
+        </interface>
     </hal>
     <hal format="aidl" optional="true">
         <name>android.hardware.power</name>
-        <fqname>IPower/default</fqname>
+        <interface>
+            <name>IPower</name>
+            <instance>default</instance>
+        </interface>
     </hal>
 </compatibility-matrix>
