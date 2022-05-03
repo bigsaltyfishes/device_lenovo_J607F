@@ -16,6 +16,14 @@
         </interface>
     </hal>
     <hal format="hidl" optional="true">
+        <name>android.hardware.usb</name>
+        <version>1.0-3</version>
+        <interface>
+            <name>IUsb</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>com.qualcomm.qti.imscmservice</name>
         <version>2.0-2</version>
         <interface>
@@ -33,7 +41,6 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.biometrics.face</name>
-        <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
             <name>IBiometricsFace</name>
