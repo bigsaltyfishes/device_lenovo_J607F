@@ -129,6 +129,8 @@ vendor/lib/libdrc.so
 vendor/lib/libqtigef.so
 vendor/lib/libsurround_3mic_proc.so
 vendor/lib/libtinycompress.so
+vendor/lib/libssrec.so
+vendor/lib/libhdmipassthru.so
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libaudiopreprocessing.so
 vendor/lib/soundfx/libqcbassboost.so
@@ -146,6 +148,8 @@ vendor/lib64/libaudioparsers.so
 vendor/lib64/libaudio_log_utils.so
 vendor/lib64/libqtigef.so
 vendor/lib64/libtinycompress.so
+vendor/lib64/libssrec.so
+vendor/lib64/libhdmipassthru.so
 vendor/lib64/soundfx/libasphere.so
 vendor/lib64/soundfx/libaudiopreprocessing.so
 vendor/lib64/soundfx/libqcbassboost.so
@@ -243,6 +247,7 @@ vendor/lib/hw/audio.bluetooth_qti.default.so
 vendor/lib/btaudio_offload_if.so
 vendor/lib/libbluetooth_audio_session_qti.so
 vendor/lib/libbluetooth_audio_session_qti_2_1.so
+vendor/lib64/hw/audio.bluetooth_qti.default.so
 vendor/lib64/btaudio_offload_if.so
 vendor/lib64/libbluetooth_audio_session_qti.so
 vendor/lib64/libbluetooth_audio_session_qti_2_1.so
@@ -356,6 +361,7 @@ vendor/lib/libswregistrationalgo.so
 vendor/lib/libswvdec.so
 vendor/lib/libvideoutils.so
 vendor/lib/libofflinelog.so
+vendor/lib/libaibokeh_impl.so
 vendor/lib/vendor.qti.hardware.camera.device@1.0.so
 vendor/lib/vendor.qti.hardware.camera.postproc@1.0-service-impl.bitra.so
 vendor/lib/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
@@ -395,6 +401,8 @@ vendor/lib64/hw/com.qti.chi.override.bitra.so
 vendor/lib64/libchilog.so
 vendor/lib64/libipebpsstriping.so
 vendor/lib64/libsns_registry_skel.so
+vendor/lib64/libFNVfbEngineHAL.so
+vendor/lib64/libBokeh.so
 vendor/lib64/android.hardware.camera.provider@2.4-external.so
 vendor/lib64/android.hardware.camera.provider@2.4-legacy.so
 vendor/lib64/camera/com.qti.sensor.lenovo_s5k4h7_lce_front_ii.so
@@ -514,6 +522,7 @@ vendor/lib64/libsns_low_lat_stream_stub.so
 vendor/lib64/libswregistrationalgo.so
 vendor/lib64/libswvdec.so
 vendor/lib64/libofflinelog.so
+vendor/lib64/libaibokeh_impl.so
 vendor/lib64/vendor.qti.hardware.camera.device@1.0.so
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.bitra.so
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
@@ -1481,6 +1490,16 @@ vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so
 vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so
+
+# Security Camera
+system_ext/lib/libseccam-ipc.so
+system_ext/lib/libseccam.so
+system_ext/lib/libseccamservice.so
+system_ext/lib64/libseccam-ipc.so
+system_ext/lib64/libseccam.so
+system_ext/lib64/libseccamservice.so
+vendor/lib64/vendor.qti.hardware.seccam@1.0.so
+vendor/lib/vendor.qti.hardware.seccam@1.0.so
 
 # Sensor-calibrate
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
