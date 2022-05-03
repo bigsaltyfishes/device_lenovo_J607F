@@ -18,7 +18,7 @@ debug.sf.enable_hwc_vds=1
 persist.backup.ntpServer="0.pool.ntp.org"
 
 # Media
-vendor.mm.enable.qcom_parser=16676959
+vendor.mm.enable.qcom_parser=16776959
 
 # Sensors
 persist.vendor.sensors.enable.mag_filter=true
