@@ -263,6 +263,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
+# Face
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.face@1.0.vendor \
+    android.hardware.biometrics.face@1.0
+
 # FM
 PRODUCT_PACKAGES += \
     FM2 \
