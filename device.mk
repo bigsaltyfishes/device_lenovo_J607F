@@ -58,7 +58,7 @@ PRODUCT_PACKAGES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-arrow
+    $(LOCAL_PATH)/overlay-evolution
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
@@ -69,8 +69,9 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 2000
-TARGET_SCREEN_WIDTH := 1200
+TARGET_SCREEN_HEIGHT := 1200
+TARGET_SCREEN_WIDTH := 2000
+TARGET_BOOT_ANIMATION_RES := 1080
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 30
@@ -218,14 +219,6 @@ PRODUCT_PACKAGES += \
     libgui_vendor \
     vendor.qti.hardware.camera.device@1.0.vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor
-
-ifeq ($(ARROW_GAPPS), true)
-PRODUCT_PACKAGES += \
-    GCamGOPrebuilt-V2
-else
-PRODUCT_PACKAGES += \
-    Snap
-endif
 
 # Component overrides
 PRODUCT_COPY_FILES += \
