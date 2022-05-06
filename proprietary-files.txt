@@ -332,8 +332,10 @@ vendor/lib/camera/com.qti.eeprom.lenovo_s5k4h7_lce_front_ii.so
 vendor/lib/hw/android.hardware.camera.provider@2.4-impl.so
 vendor/lib/hw/camera.qcom.so
 vendor/lib/hw/com.qti.chi.override.so
+vendor/lib/libBSTSingleAIBokeh.so
 vendor/lib/libcamera2ndk_vendor.so
 vendor/lib/libcamerapostproc.so
+vendor/lib/libtensorflowlite.so
 vendor/lib/libcamera_nn_stub.so
 vendor/lib/libcamxexternalformatutils.so
 vendor/lib/libcamxfacialfeatures.so
@@ -400,6 +402,7 @@ vendor/lib64/libbitmlengine.so
 vendor/lib64/hw/com.qti.chi.override.bitra.so
 vendor/lib64/libchilog.so
 vendor/lib64/libipebpsstriping.so
+vendor/lib64/libtensorflowlite.so
 vendor/lib64/libsns_registry_skel.so
 vendor/lib64/libFNVfbEngineHAL.so
 vendor/lib64/libBokeh.so
@@ -503,6 +506,8 @@ vendor/lib64/libcamxfacialfeatures.so
 vendor/lib64/libcamxfdalgo.so
 vendor/lib64/libcamxfdengine.so
 vendor/lib64/libcamxifestriping.so
+vendor/lib64/libSNPE.so
+vendor/lib64/libBSTSingleAIBokeh.so
 vendor/lib64/libcamximageformatutils.so
 vendor/lib64/libcamxncs.so
 vendor/lib64/libcamxstatscore.so
