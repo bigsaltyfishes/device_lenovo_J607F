@@ -16,6 +16,11 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/lenovo/J607Z/J607Z-vendor.mk)
 
+# Gapps
+ifeq ($(INCLUDE_GAPPS), true)
+$(call inherit-product-if-exists, vendor/gapps/basic/config.mk)
+endif
+
 PRODUCT_CHARACTERISTICS := tablet
 
 # Enable virtual A/B OTA
@@ -218,14 +223,6 @@ PRODUCT_PACKAGES += \
     libgui_vendor \
     vendor.qti.hardware.camera.device@1.0.vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor
-
-ifeq ($(ARROW_GAPPS), true)
-PRODUCT_PACKAGES += \
-    GCamGOPrebuilt-V2
-else
-PRODUCT_PACKAGES += \
-    Snap
-endif
 
 # Component overrides
 PRODUCT_COPY_FILES += \
