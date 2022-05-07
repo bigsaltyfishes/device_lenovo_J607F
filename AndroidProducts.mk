@@ -5,8 +5,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/arrow_J607F.mk
+    $(LOCAL_DIR)/lineage_J607F.mk
 
 COMMON_LUNCH_CHOICES := \
-    arrow_J607F-userdebug \
-    arrow_J607F-eng
+    lineage_J607F-userdebug \
+    lineage_J607F-eng
