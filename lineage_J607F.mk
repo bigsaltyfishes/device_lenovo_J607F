@@ -16,6 +16,9 @@ $(call inherit-product, vendor/lineage/config/common.mk)
 
 DEVICE_MAINTAINER := bigsaltyfishes
 
+# Enable Face Unlock
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_J607F
 PRODUCT_DEVICE := J607F
