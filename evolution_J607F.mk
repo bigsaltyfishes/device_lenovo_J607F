@@ -16,6 +16,9 @@ $(call inherit-product, vendor/evolution/config/common_full_tablet_wifionly.mk)
 
 DEVICE_MAINTAINER := bigsaltyfishes
 
+# Enable Face Unlock
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := evolution_J607F
 PRODUCT_DEVICE := J607F
