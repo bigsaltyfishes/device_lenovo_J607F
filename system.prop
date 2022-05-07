@@ -33,6 +33,3 @@ ro.vendor.qti.va_aosp.support=1
 # Bluetooth
 persist.vendor.btstack.aac_frm_ctl.enabled=true
 vendor.bluetooth.soc=cherokee
-
-# Lockscreen
-lockscreen.rot_override=true

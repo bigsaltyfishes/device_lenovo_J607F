@@ -29,9 +29,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <!-- Enable doze mode -->
     <bool name="doze_display_state_supported">false</bool>
 
-    <!-- Enable Lockscreen Rotation -->
-    <bool name="config_enableLockScreenRotation">true</bool>
-
     <!-- Tiles to auto add to Quick Settings upon first change of a given secure setting.
          The syntax is setting-name:spec. If the tile is a TileService, the spec should be specified
          as custom(package/class). Relative class name is supported. -->
