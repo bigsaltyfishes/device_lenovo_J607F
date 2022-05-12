@@ -17,15 +17,6 @@
 # (e.g. Google Camera App)
 /mnt/vendor/dsp/fastrpc_shell_3                                         u:object_r:public_adsprpcd_file:s0
 
-# Fingerprint - devices
-/dev/goodix_fp                                                          u:object_r:fingerprint_device:s0
-
-# Fingerprint - data
-/data/gf_data(/.*)?                                                     u:object_r:fingerprint_data_file:s0
-/data/vendor/goodix(/.*)?                                               u:object_r:fingerprint_data_file:s0
-/data/vendor/fpc(/.*)?                                                  u:object_r:fingerprint_data_file:s0
-/data/vendor/fpdump(/.*)?                                               u:object_r:fingerprint_data_file:s0
-
 # LED
 /sys/devices/platform/soc/[a-z0-9]+.qcom,spmi/spmi-[0-1]/spmi0-0[0-9]/[a-z0-9]+.qcom,spmi:qcom,[a-z0-9]+@[0-9]:qcom,leds@d000/leds(/.*)?            u:object_r:sysfs_leds:s0
 /sys/devices/platform/soc/[a-z0-9]+.i2c/i2c-[0-9]/[0-9]-[0-9]+/leds(/.*)?                                                                           u:object_r:sysfs_leds:s0
