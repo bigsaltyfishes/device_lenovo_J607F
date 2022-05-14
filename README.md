@@ -20,3 +20,12 @@ The Lenovo Xiaoxin Pad Plus (codenamed _"arnoz_prc"_) is a mid-range tablet from
 ## Device picture
 
 ![Lenovo Xiaoxin Pad Plus](https://p2.lefile.cn/product/adminweb/2021/05/24/ENncgiEamv4G8qxbIaJSLykaf-2075.w520.jpg)
+
+## Copyright
+
+```
+#
+# Copyright (C) 2021 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
