@@ -16,7 +16,7 @@
 
 
 cc_library {
-    name: "libgptutils.lenovo_lito",
+    name: "librecovery_updater.arnoz",
     vendor: true,
     recovery_available: true,
     shared_libs: [
@@ -30,6 +30,7 @@ cc_library {
     ],
     srcs: [
         "gpt-utils.cpp",
+        "recovery-ufs-bsg.cpp",
     ],
     owner: "qti",
     header_libs: [
