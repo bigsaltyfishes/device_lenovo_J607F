@@ -60,6 +60,11 @@ PRODUCT_PACKAGES += \
     bootctrl.lito \
     bootctrl.lito.recovery
 
+# Face
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.face@1.0.vendor \
+    android.hardware.biometrics.face@1.0
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
