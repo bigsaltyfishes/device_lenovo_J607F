@@ -57,7 +57,12 @@
 
     <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
          in hardware. -->
-    <bool name="config_setColorTransformAccelerated">false</bool>
+    <bool name="config_setColorTransformAccelerated">true</bool>
+
+     <!-- Control whether Night display is available. This should only be enabled on devices
+         that have a HWC implementation that can apply the matrix passed to setColorTransform
+         without impacting power, performance, and app compatibility (e.g. protected content). -->
+     <bool name="config_nightDisplayAvailable">true</bool>
 
     <!-- Power Management: Specifies whether to decouple the auto-suspend state of the
          device from the display on/off state.
@@ -85,7 +90,10 @@
     <!-- List of regexpressions describing the interface (if any) that represent tetherable
          USB interfaces.  If the device doesn't want to support tething over USB this should
          be empty.  An example would be "usb.*" -->
-    <array name="config_tether_usb_regexs" />
+     <string-array translatable="false" name="config_tether_usb_regexs">
+          <item>"usb\\d"</item>
+          <item>"rndis\\d"</item>
+     </string-array>
 
     <!-- Dhcp range (min, max) to use for tethering purposes -->
     <!-- USB is  192.168.42.1 and 255.255.255.0
@@ -156,7 +164,11 @@
     <!-- List of regexpressions describing the interface (if any) that represent tetherable
          bluetooth interfaces.  If the device doesn't want to support tethering over bluetooth this
          should be empty. -->
-    <array name="config_tether_bluetooth_regexs" />
+     <string-array translatable="false" name="config_tether_bluetooth_regexs">
+          <item>"bnep\\d"</item>
+          <item>"bt-pan"</item>
+      </string-array>
+  
 
     <!-- Array of ConnectivityManager.TYPE_xxxx values allowable for tethering -->
     <!-- Common options are [1, 4] for TYPE_WIFI and TYPE_MOBILE_DUN or
@@ -168,14 +180,14 @@
     </integer-array>
 
     <!-- Boolean indicating if current platform supports BLE peripheral mode -->
-    <bool name="config_bluetooth_le_peripheral_mode_supported">false</bool>
+    <bool name="config_bluetooth_le_peripheral_mode_supported">true</bool>
 
     <!-- If this is true, the screen will come on when you plug/unplug usb/power/whatever. -->
-    <bool name="config_unplugTurnsOnScreen">false</bool>
+    <bool name="config_unplugTurnsOnScreen">true</bool>
 
     <!-- When true use the linux /dev/input/event subsystem to detect the switch changes
          on the headphone/microphone jack. When false use the older uevent framework. -->
-    <bool name="config_useDevInputEventForAudioJack">false</bool>
+    <bool name="config_useDevInputEventForAudioJack">true</bool>
 
     <!-- Boolean indicating if restoring network selection should be skipped -->
     <!-- The restoring is handled by modem if it is true-->
@@ -187,7 +199,10 @@
     <!-- List of regexpressions describing the interface (if any) that represent tetherable
          Wifi interfaces.  If the device doesn't want to support tethering over Wifi this
          should be empty.  An example would be "softap.*" -->
-    <array name="config_tether_wifi_regexs" />
+     <string-array name="config_tether_wifi_regexs">
+          <item>softap0</item>
+          <item>wigig0</item>
+      </string-array>
 
     <!-- Whether WiFi display is supported by this device.
          There are many prerequisites for this feature to work correctly.
@@ -201,7 +216,7 @@
          * The remote submix module "audio.r_submix.default" must be installed on the device.
          * The device must be provisioned with HDCP keys (for protected content).
     -->
-    <bool name="config_enableWifiDisplay">false</bool>
+    <bool name="config_enableWifiDisplay">true</bool>
 
     <!-- Set to true if the wifi display supports compositing content stored
          in gralloc protected buffers.  For this to be true, there must exist
@@ -215,7 +230,7 @@
          This flag controls whether the {@link Display#FLAG_SUPPORTS_PROTECTED_BUFFERS}
          flag is set for wifi displays.
     -->
-    <bool name="config_wifiDisplaySupportsProtectedBuffers">false</bool>
+    <bool name="config_wifiDisplaySupportsProtectedBuffers">true</bool>
 
     <!-- Flag indicating whether the we should enable the automatic brightness in Settings.
          Software implementation will be used if config_hardware_auto_brightness_available is not set -->
@@ -258,7 +273,17 @@
          than the size of the config_autoBrightnessLevels array.
          The brightness values must be between 0 and 255 and be non-decreasing.
          This must be overridden in platform specific overlays -->
-    <array name="config_autoBrightnessLcdBacklightValues" />
+     <integer-array name="config_autoBrightnessLcdBacklightValues">
+          <item>6</item>
+          <item>20</item>
+          <item>38</item>
+          <item>55</item>
+          <item>93</item>
+          <item>143</item>
+          <item>199</item>
+          <item>255</item>
+          <item>255</item>
+      </integer-array>
 
     <!-- Array of light sensor LUX values to define our levels for auto backlight brightness support.
          The N entries of this array define N + 1 control points as follows:
@@ -301,12 +326,6 @@
     <!-- Set to true to add links to Cell Broadcast app from Settings and MMS app. -->
     <bool name="config_cellBroadcastAppLinks">true</bool>
 
-    <!-- MMS user agent string -->
-    <string name="config_mms_user_agent" />
-
-    <!-- MMS user agent prolfile url -->
-    <string name="config_mms_user_agent_profile_url" />
-
     <!-- Configuration to restart radio upon PDP_DEACTIVATE with
          error cause as Regular deactivation(36). -->
     <!--
@@ -332,19 +351,19 @@
          provisioning, availability etc -->
     <bool name="config_carrier_volte_available">false</bool>
 
-    <array name="config_mobile_tcp_buffers" />
-
     <!-- Default list of files pinned by the Pinner Service -->
-    <array name="config_defaultPinnerServiceFiles" />
-
-    <!-- Should the pinner service pin the Camera application? -->
-    <bool name="config_pinnerCameraApp">false</bool>
+    <string-array translatable="false" name="config_defaultPinnerServiceFiles">
+          <item>"/system/framework/framework.jar"</item>
+          <item>"/system/framework/services.jar"</item>
+          <item>"/apex/com.android.art/javalib/core-oj.jar"</item>
+          <item>"/apex/com.android.art/javalib/core-libart.jar"</item>
+          <item>"/apex/com.android.media/javalib/updatable-media.jar"</item>
+          <item>"/system_ext/priv-app/SystemUI/SystemUI.apk"</item>
+          <item>"/system/bin/surfaceflinger"</item>
+    </string-array>
 
     <!-- Should the pinner service pin the Home application? -->
-    <bool name="config_pinnerHomeApp">false</bool>
-
-    <!-- List of files pinned by the Pinner Service with the JIT Zygote boot image b/119800099 -->
-    <array name="config_jitzygoteBootImagePinnerServiceFiles" />
+    <bool name="config_pinnerHomeApp">true</bool>
 
     <!--  Maximum number of supported users -->
     <integer name="config_multiuserMaximumUsers">1</integer>
@@ -368,37 +387,22 @@
     <bool name="config_bluetooth_hfp_inband_ringing_support">true</bool>
 
     <!-- Telephony qualified networks service package name to bind to by default. -->
-    <string name="config_qualified_networks_service_package" />
+    <string name="config_qualified_networks_service_package">vendor.qti.iwlan</string>
 
     <!-- IWLAN data service package name to bind to by default. If none is specified in an overlay, an
          empty string is passed in -->
-    <string name="config_wlan_data_service_package" />
+    <string name="config_wlan_data_service_package">vendor.qti.iwlan</string>
 
     <!-- IWLAN network service package name to bind to by default. If none is specified in an overlay, an
          empty string is passed in -->
-    <string name="config_wlan_network_service_package" />
+    <string name="config_wlan_network_service_package">vendor.qti.iwlan</string>
 
     <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
          when registering authenticators with BiometricService. Format must be ID:Modality:Strength,
          where: IDs are unique per device, Modality as defined in BiometricAuthenticator.java,
          and Strength as defined in Authenticators.java -->
     <string-array name="config_biometric_sensors" translatable="false" >
-        <item>0:8:255</item> <!-- ID0:Fingerprint:Strong -->
+          <item>0:2:15</item> <!-- ID0:Fingerprint:Strong -->
     </string-array>
 
-    <!-- The bounding path of the cutout region of the main built-in display.
-         Must either be empty if there is no cutout region, or a string that is parsable by
-         {@link android.util.PathParser}.
-         The path is assumed to be specified in display coordinates with pixel units and in
-         the display's native orientation, with the origin of the coordinate system at the
-         center top of the display.
-         To facilitate writing device-independent emulation overlays, the marker `@dp` can be
-         appended after the path string to interpret coordinates in dp instead of px units.
-         Note that a physical cutout should be configured in pixels for the best results.
-         Example for a 10px x 10px square top-center cutout:
-                <string ...>M -5,0 L -5,10 L 5,10 L 5,0 Z</string>
-         Example for a 10dp x 10dp square top-center cutout:
-                <string ...>M -5,0 L -5,10 L 5,10 L 5,0 Z @dp</string>
-         @see https://www.w3.org/TR/SVG/paths.html#PathData -->
-    <string name="config_mainBuiltInDisplayCutout" />
 </resources>
