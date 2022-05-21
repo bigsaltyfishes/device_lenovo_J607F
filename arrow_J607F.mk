@@ -13,6 +13,14 @@ $(call inherit-product, device/lenovo/J607F/device.mk)
 
 # Inherit some common ArrowOS stuff.
 $(call inherit-product, vendor/arrow/config/common.mk)
+
+# Enable 2-Pane Layout
+PRODUCT_PACKAGES += \
+	androidx.window.extensions
+
+PRODUCT_PACKAGES += \
+	WallpaperPicker
+	
 DEVICE_MAINTAINER := bigsaltyfishes
 
 # Device identifier. This must come after all inclusions.
