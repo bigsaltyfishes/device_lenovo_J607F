@@ -12,12 +12,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/lenovo/J607F/device.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full.mk)
+$(call inherit-product, vendor/lineage/config/common_full_tablet_wifionly.mk)
 
 DEVICE_MAINTAINER := bigsaltyfishes
 
 # Enable Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED := true
+
+# AOSP Wallpaper Picker
+PRODUCT_PACKAGES += \
+	WallpaperPicker
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_J607F
