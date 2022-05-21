@@ -19,6 +19,10 @@ DEVICE_MAINTAINER := bigsaltyfishes
 # Enable Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
+# AOSP Wallpaper Picker
+PRODUCT_PACKAGES += \
+	WallpaperPicker
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := evolution_J607F
 PRODUCT_DEVICE := J607F
