@@ -14,6 +14,9 @@ $(call inherit-product, device/lenovo/J607F/device.mk)
 # Inherit some common Evolution X stuff.
 $(call inherit-product, vendor/evolution/config/common_full_tablet_wifionly.mk)
 
+# Switch to Lawnchair if exist
+$(call inherit-product-if-exists, vendor/lawnchair/lawnchair.mk)
+
 DEVICE_MAINTAINER := bigsaltyfishes
 
 # Enable Face Unlock
