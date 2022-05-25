@@ -59,10 +59,10 @@
          in hardware. -->
     <bool name="config_setColorTransformAccelerated">true</bool>
 
-     <!-- Control whether Night display is available. This should only be enabled on devices
-         that have a HWC implementation that can apply the matrix passed to setColorTransform
-         without impacting power, performance, and app compatibility (e.g. protected content). -->
-     <bool name="config_nightDisplayAvailable">true</bool>
+    <!-- Control whether Night display is available. This should only be enabled on devices
+        that have a HWC implementation that can apply the matrix passed to setColorTransform
+        without impacting power, performance, and app compatibility (e.g. protected content). -->
+    <bool name="config_nightDisplayAvailable">true</bool>
 
     <!-- Power Management: Specifies whether to decouple the auto-suspend state of the
          device from the display on/off state.
@@ -90,10 +90,10 @@
     <!-- List of regexpressions describing the interface (if any) that represent tetherable
          USB interfaces.  If the device doesn't want to support tething over USB this should
          be empty.  An example would be "usb.*" -->
-     <string-array translatable="false" name="config_tether_usb_regexs">
-          <item>"usb\\d"</item>
-          <item>"rndis\\d"</item>
-     </string-array>
+    <string-array translatable="false" name="config_tether_usb_regexs">
+        <item>"usb\\d"</item>
+        <item>"rndis\\d"</item>
+    </string-array>
 
     <!-- Dhcp range (min, max) to use for tethering purposes -->
     <!-- USB is  192.168.42.1 and 255.255.255.0
@@ -164,11 +164,11 @@
     <!-- List of regexpressions describing the interface (if any) that represent tetherable
          bluetooth interfaces.  If the device doesn't want to support tethering over bluetooth this
          should be empty. -->
-     <string-array translatable="false" name="config_tether_bluetooth_regexs">
-          <item>"bnep\\d"</item>
-          <item>"bt-pan"</item>
-      </string-array>
-  
+    <string-array translatable="false" name="config_tether_bluetooth_regexs">
+        <item>"bnep\\d"</item>
+        <item>"bt-pan"</item>
+    </string-array>
+
 
     <!-- Array of ConnectivityManager.TYPE_xxxx values allowable for tethering -->
     <!-- Common options are [1, 4] for TYPE_WIFI and TYPE_MOBILE_DUN or
@@ -202,10 +202,10 @@
     <!-- List of regexpressions describing the interface (if any) that represent tetherable
          Wifi interfaces.  If the device doesn't want to support tethering over Wifi this
          should be empty.  An example would be "softap.*" -->
-     <string-array name="config_tether_wifi_regexs">
-          <item>softap0</item>
-          <item>wigig0</item>
-      </string-array>
+    <string-array name="config_tether_wifi_regexs">
+        <item>softap0</item>
+        <item>wigig0</item>
+    </string-array>
 
     <!-- Whether WiFi display is supported by this device.
          There are many prerequisites for this feature to work correctly.
@@ -237,7 +237,7 @@
 
     <!-- Flag indicating whether the we should enable the automatic brightness in Settings.
          Software implementation will be used if config_hardware_auto_brightness_available is not set -->
-    <bool name="config_automatic_brightness_available">false</bool>
+    <bool name="config_automatic_brightness_available">true</bool>
 
     <!-- Wifi driver supports batched scan -->
     <bool translatable="false" name="config_wifi_batched_scan_supported">false</bool>
@@ -276,17 +276,17 @@
          than the size of the config_autoBrightnessLevels array.
          The brightness values must be between 0 and 255 and be non-decreasing.
          This must be overridden in platform specific overlays -->
-     <integer-array name="config_autoBrightnessLcdBacklightValues">
-          <item>6</item>
-          <item>20</item>
-          <item>38</item>
-          <item>55</item>
-          <item>93</item>
-          <item>143</item>
-          <item>199</item>
-          <item>255</item>
-          <item>255</item>
-      </integer-array>
+    <integer-array name="config_autoBrightnessLcdBacklightValues">
+        <item>6</item>
+        <item>20</item>
+        <item>38</item>
+        <item>55</item>
+        <item>93</item>
+        <item>143</item>
+        <item>199</item>
+        <item>255</item>
+        <item>255</item>
+    </integer-array>
 
     <!-- Array of light sensor LUX values to define our levels for auto backlight brightness support.
          The N entries of this array define N + 1 control points as follows:
@@ -309,21 +309,15 @@
 
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
-        <item>6</item>
-        <item>35</item>
-        <item>69</item>
-        <item>104</item>
-        <item>173</item>
-        <item>230</item>
-        <item>403</item>
-        <item>518</item>
-        <item>633</item>
-        <item>829</item>
-        <item>1094</item>
-        <item>1267</item>
-        <item>1727</item>
-        <item>2303</item>
-        <item>4030</item>
+        <item>2</item>
+        <item>50</item>
+        <item>150</item>
+        <item>275</item>
+        <item>580</item>
+        <item>980</item>
+        <item>1450</item>
+        <item>2290</item>
+        <item>2865</item>
     </integer-array>
 
     <!-- Set to true to add links to Cell Broadcast app from Settings and MMS app. -->
@@ -356,13 +350,13 @@
 
     <!-- Default list of files pinned by the Pinner Service -->
     <string-array translatable="false" name="config_defaultPinnerServiceFiles">
-          <item>"/system/framework/framework.jar"</item>
-          <item>"/system/framework/services.jar"</item>
-          <item>"/apex/com.android.art/javalib/core-oj.jar"</item>
-          <item>"/apex/com.android.art/javalib/core-libart.jar"</item>
-          <item>"/apex/com.android.media/javalib/updatable-media.jar"</item>
-          <item>"/system_ext/priv-app/SystemUI/SystemUI.apk"</item>
-          <item>"/system/bin/surfaceflinger"</item>
+        <item>"/system/framework/framework.jar"</item>
+        <item>"/system/framework/services.jar"</item>
+        <item>"/apex/com.android.art/javalib/core-oj.jar"</item>
+        <item>"/apex/com.android.art/javalib/core-libart.jar"</item>
+        <item>"/apex/com.android.media/javalib/updatable-media.jar"</item>
+        <item>"/system_ext/priv-app/SystemUI/SystemUI.apk"</item>
+        <item>"/system/bin/surfaceflinger"</item>
     </string-array>
 
     <!-- Should the pinner service pin the Home application? -->
@@ -386,6 +380,12 @@
         autodetected from the Configuration. -->
     <bool name="config_showNavigationBar">true</bool>
 
+    <!-- Whether should turn off screen when slipcover block proximity sensor -->
+    <bool name="config_turnoff_screen_when_slipcover_block_proximity_sensor">true</bool>
+
+    <!-- Whether device supports double tap to wake -->
+    <bool name="config_supportDoubleTapWake">true</bool>
+
     <!-- Boolean indicating if current platform supports HFP inband ringing -->
     <bool name="config_bluetooth_hfp_inband_ringing_support">true</bool>
 
@@ -404,8 +404,111 @@
          when registering authenticators with BiometricService. Format must be ID:Modality:Strength,
          where: IDs are unique per device, Modality as defined in BiometricAuthenticator.java,
          and Strength as defined in Authenticators.java -->
-    <string-array name="config_biometric_sensors" translatable="false" >
-          <item>0:2:15</item> <!-- ID0:Fingerprint:Strong -->
+    <string-array name="config_biometric_sensors" translatable="false">
+        <item>0:2:15</item> <!-- ID0:Fingerprint:Strong -->
     </string-array>
+
+
+    <integer-array name="config_screenBrightnessBacklight">
+        <item>0</item>
+        <item>15</item>
+        <item>30</item>
+        <item>45</item>
+        <item>60</item>
+        <item>75</item>
+        <item>90</item>
+        <item>105</item>
+        <item>120</item>
+        <item>135</item>
+        <item>150</item>
+        <item>165</item>
+        <item>180</item>
+        <item>195</item>
+        <item>210</item>
+        <item>225</item>
+        <item>240</item>
+        <item>255</item>
+    </integer-array>
+    <array name="config_screenBrightnessNits">
+        <item>0</item>
+        <item>26.11</item>
+        <item>50.5</item>
+        <item>74.17</item>
+        <item>96.89</item>
+        <item>118.3</item>
+        <item>139.8</item>
+        <item>162.9</item>
+        <item>189.8</item>
+        <item>217.4</item>
+        <item>240.4</item>
+        <item>265.3</item>
+        <item>288.7</item>
+        <item>316</item>
+        <item>340.8</item>
+        <item>357.9</item>
+        <item>376.2</item>
+        <item>392.9</item>
+    </array>
+
+    <array name="config_displayWhiteBalanceIncreaseThresholds">
+        <item>0.1</item>
+    </array>
+    <array name="config_displayWhiteBalanceLowLightAmbientBiases">
+        <item>0.0</item>
+        <item>1.0</item>
+    </array>
+    <array name="config_displayWhiteBalanceLowLightAmbientBrightnesses">
+        <item>10.0</item>
+        <item>10.0</item>
+    </array>
+    <array name="config_minimumBrightnessCurveLux">
+        <item>0.0</item>
+        <item>2000.0</item>
+        <item>4000.0</item>
+    </array>
+    <array name="config_minimumBrightnessCurveNits">
+        <item>0.0</item>
+        <item>50.0</item>
+        <item>90.0</item>
+    </array>
+    <string-array name="config_nightDisplayColorTemperatureCoefficients">
+        <item>0.0</item>
+        <item>0.0</item>
+        <item>1.0</item>
+        <item>-0.00000000962353339</item>
+        <item>0.000153045476</item>
+        <item>0.390782778</item>
+        <item>-0.0000000189359041</item>
+        <item>0.000302412211</item>
+        <item>-0.198650895</item>
+    </string-array>
+    <string-array name="config_nightDisplayColorTemperatureCoefficientsNative">
+        <item>0.0</item>
+        <item>0.0</item>
+        <item>1.0</item>
+        <item>-0.00000000962353339</item>
+        <item>0.000153045476</item>
+        <item>0.390782778</item>
+        <item>-0.0000000189359041</item>
+        <item>0.000302412211</item>
+        <item>-0.198650895</item>
+    </string-array>
+    <string-array name="config_reduceBrightColorsCoefficients">
+        <item>-0.000000000000001</item>
+        <item>-0.955555555555554</item>
+        <item>1.000000000000000</item>
+    </string-array>
+    <string-array name="config_reduceBrightColorsCoefficientsNonlinear">
+        <item>-0.4429953456</item>
+        <item>-0.2434077725</item>
+        <item>0.9809063061</item>
+    </string-array>
+
+    <integer-array name="config_screenBrighteningThresholds">
+        <item>100</item>
+    </integer-array>
+    <integer-array name="config_screenDarkeningThresholds">
+        <item>200</item>
+    </integer-array>
 
 </resources>
