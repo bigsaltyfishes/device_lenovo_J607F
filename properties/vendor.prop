@@ -131,6 +131,7 @@ debug.stagefright.omx_default_rank=512
 debug.stagefright.omx_default_rank.sw-audio=16
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 vendor.mm.enable.qcom_parser=16777215
+vendor.media.omx=0
 
 # Netflix
 ro.netflix.bsp_rev=Q7250-19133-1
