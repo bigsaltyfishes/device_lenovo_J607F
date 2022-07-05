@@ -971,6 +971,8 @@ vendor/lib64/libtinyxml2_1.so
 vendor/lib/hw/vulkan.adreno.so
 vendor/lib64/hw/vulkan.adreno.so
 
+# Graphics (Vulkan Overlays) - from redfin-user-12-S3B1.220318.003-8372304-release-keys
+-vendor/app/gpu_profiling_vulkan_layer/gpu_profiling_vulkan_layer.apk;PRESIGNED|04ba24133e226aacf0108e5700bbbb02521729c8
 # IOP
 vendor/bin/hw/vendor.qti.hardware.iop@2.0-service
 vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc
