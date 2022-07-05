@@ -219,6 +219,8 @@ on boot
     # Create vpp directory
     mkdir /mnt/vendor/persist/vpp 0770 media media
 
+	# Create pa-cal driver directory lct
+    mkdir /mnt/vendor/persist/audio 0770 audio audio
 
     # Create hvdcp_opti directory
     mkdir /mnt/vendor/persist/hvdcp_opti 0770 root system
@@ -290,6 +292,8 @@ on post-fs-data
     # Create directory for radio
     mkdir /data/vendor/radio 0770 system radio
     rm /data/vendor/radio/shmbus
+
+    mkdir /data/vendor/qxdmlog 0771 system system
 
     # Create directory for modem_config
     mkdir /data/vendor/modem_config 0570 radio root
@@ -397,6 +401,7 @@ service nqnfcinfo /system/vendor/bin/nqnfcinfo
     class late_start
     group nfc
     user system
+    disabled
     oneshot
 
 service iop /system/vendor/bin/iop
@@ -545,11 +550,6 @@ service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
 #   group wifi inet keystore
     interface android.hardware.wifi.supplicant@1.0::ISupplicant default
     interface android.hardware.wifi.supplicant@1.1::ISupplicant default
-    interface android.hardware.wifi.supplicant@1.2::ISupplicant default
-    interface android.hardware.wifi.supplicant@1.3::ISupplicant default
-    interface vendor.qti.hardware.wifi.supplicant@2.0::ISupplicantVendor default
-    interface vendor.qti.hardware.wifi.supplicant@2.1::ISupplicantVendor default
-    interface vendor.qti.hardware.wifi.supplicant@2.2::ISupplicantVendor default
     class main
     socket vendor_wpa_wlan0 dgram 660 wifi wifi
     disabled
