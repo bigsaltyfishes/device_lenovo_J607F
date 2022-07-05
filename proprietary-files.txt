@@ -966,6 +966,9 @@ vendor/lib64/libllvm-qcom.so|7b470265d6cb64b73fef276ffa7ccaef61150f1e
 vendor/lib/hw/vulkan.adreno.so|5a685e0912918da507985567905e5ce0aa3e4d4d
 vendor/lib64/hw/vulkan.adreno.so|5c2605601c21ddc87a090a8c53c8bfbd536604fe
 
+# Graphics (Vulkan Overlays) - from redfin-user-12-S3B1.220318.003-8372304-release-keys
+-vendor/app/gpu_profiling_vulkan_layer/gpu_profiling_vulkan_layer.apk;PRESIGNED|11125c9e335a764d5d5dcbb23f805513
+
 # IOP
 vendor/bin/hw/vendor.qti.hardware.iop@2.0-service
 vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc
