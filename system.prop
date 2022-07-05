@@ -37,6 +37,10 @@ persist.vendor.ssr.restart_level=ALL_ENABLE
 # Vendor
 ro.vendor.qti.va_aosp.support=1
 
+# VulkanAPI
+graphics.gpu.profiler.support=true
+graphics.gpu.profiler.vulkan_layer_apk=com.google.pixel.redbull.gpuprofiling.vulkanlayer
+
 # Bluetooth
 persist.vendor.btstack.aac_frm_ctl.enabled=true
 vendor.bluetooth.soc=cherokee
