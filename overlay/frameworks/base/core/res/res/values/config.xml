@@ -377,6 +377,18 @@
         autodetected from the Configuration. -->
     <bool name="config_showNavigationBar">true</bool>
 
+    <!-- Corners appearance of the letterbox background.
+            0 - Solid background using color specified in R.color.config_letterboxBackgroundColor.
+            1 - Color specified in R.attr.colorBackground for the letterboxed application.
+            2 - Color specified in R.attr.colorBackgroundFloating for the letterboxed application.
+            3 - Wallpaper with dimmed with blur or/and dark scrim. At least one of the following
+            parameters should be > 0: config_letterboxBackgroundWallpaperBlurRadius,
+            config_letterboxBackgroundWallaperDarkScrimAlpha. If it's not the case or blur radius
+            provided but blur isn't supported by the device and this option
+            is selected then implementation will default to option 0.
+        If given value is outside of this range, the option 0 will be assummed. -->
+    <integer name="config_letterboxBackgroundType">3</integer>
+
     <!-- Indicate whether closing the lid causes the device to go to sleep and opening
          it causes the device to wake up.
          The default is false. -->
