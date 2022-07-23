@@ -126,6 +126,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fs_config_files
 
+# Remove Packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # Atrace
 PRODUCT_PACKAGES += \
     android.hardware.atrace@1.0-service
