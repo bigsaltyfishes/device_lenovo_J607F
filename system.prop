@@ -6,7 +6,7 @@ ro.sf.blurs_are_expensive=1
 ro.charger.enable_suspend = 1
 
 # Camera
-vendor.camera.aux.packagelist=org.codeaurora.snapcam,org.lineageos.snap,com.android.camera
+vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.google.android.apps.cameralite
 
 # CNE
 persist.vendor.cne.feature=1
