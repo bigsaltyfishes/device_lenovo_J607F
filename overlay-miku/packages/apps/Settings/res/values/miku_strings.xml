@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2019 - 2021 The Evolution X Project
+<!--
+     Copyright 2021 Miku UI
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
@@ -10,9 +11,9 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Adaptive charging sysfs node and value for suspend/resume charging -->
-    <string name="config_adaptiveChargingSysfsNode" translatable="false">/sys/class/power_supply/battery/input_suspend</string>
-    <string name="config_adaptiveChargingSuspendValue" translatable="false">1</string>
-    <string name="config_adaptiveChargingResumeValue" translatable="false">0</string>
+<resources>
+
+    <!-- Maintainer Url -->
+    <string name="miku_maintainer_uri" translatable="false">https://github.com/bigsaltyfishes</string>
+
 </resources>
