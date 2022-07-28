@@ -8,5 +8,6 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/arrow_J607F.mk
 
 COMMON_LUNCH_CHOICES := \
+    arrow_J607F-user \
     arrow_J607F-userdebug \
     arrow_J607F-eng
