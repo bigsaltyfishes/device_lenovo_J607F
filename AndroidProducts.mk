@@ -8,5 +8,6 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/miku_J607F.mk
 
 COMMON_LUNCH_CHOICES := \
+    miku_J607F-user \
     miku_J607F-userdebug \
     miku_J607F-eng
