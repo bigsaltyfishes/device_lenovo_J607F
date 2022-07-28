@@ -6,13 +6,13 @@
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
 # Inherit from J607F device
 $(call inherit-product, device/lenovo/J607F/device.mk)
 
 # Inherit some common Evolution X stuff.
-$(call inherit-product, vendor/evolution/config/common_full_tablet_wifionly.mk)
+$(call inherit-product, vendor/kscope/target/product/tablet_no_telephony.mk)
 
 # Switch to Lawnchair if exist
 $(call inherit-product-if-exists, vendor/lawnchair/lawnchair.mk)
@@ -27,7 +27,7 @@ PRODUCT_PACKAGES += \
 	WallpaperPicker
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := evolution_J607F
+PRODUCT_NAME := kscope_J607F
 PRODUCT_DEVICE := J607F
 PRODUCT_BRAND := Lenovo
 PRODUCT_MODEL := Lenovo TB-J607F

@@ -14,3 +14,6 @@ allow init adsprpcd_file:file mounton;
 allow init vendor_data_file:file lock;
 allow init hal_audio_default:binder call;
 allow init platform_app:binder call;
+
+allow vendor_qti_init_shell ctl_start_prop:property_service set;
+allow vendor_qti_init_shell sysfs:file setattr;

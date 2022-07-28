@@ -5,8 +5,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/evolution_J607F.mk
+    $(LOCAL_DIR)/kscope_J607F.mk
 
 COMMON_LUNCH_CHOICES := \
-    evolution_J607F-userdebug \
-    evolution_J607F-eng
+    kscope_J607F-userdebug \
+    kscope_J607F-eng
