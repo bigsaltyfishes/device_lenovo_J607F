@@ -1,5 +1,5 @@
 # Charger
-ro.charger.enable_suspend = 1
+ro.charger.enable_suspend=1
 
 # Camera
 vendor.camera.aux.packagelist=org.codeaurora.snapcam,org.lineageos.snap,com.android.camera
@@ -13,12 +13,26 @@ persist.vendor.data.mode=concurrent
 
 # Display
 debug.sf.enable_hwc_vds=1
+debug.sf.latch_unsignaled=1
 
 # DRM
 drm.service.enabled=true
 
 # GPS
 persist.backup.ntpServer="0.pool.ntp.org"
+
+# HWUI
+ro.hwui.texture_cache_size=72
+ro.hwui.layer_cache_size=48
+ro.hwui.r_buffer_cache_size=8
+ro.hwui.path_cache_size=32
+ro.hwui.gradient_cache_size=1
+ro.hwui.drop_shadow_cache_size=6
+ro.hwui.texture_cache_flushrate=0.4
+ro.hwui.text_small_cache_width=1024
+ro.hwui.text_small_cache_height=1024
+ro.hwui.text_large_cache_width=2048
+ro.hwui.text_large_cache_height=1024
 
 # Media
 vendor.mm.enable.qcom_parser=16776959
