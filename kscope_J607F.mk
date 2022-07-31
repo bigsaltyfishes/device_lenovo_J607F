@@ -14,8 +14,8 @@ $(call inherit-product, device/lenovo/J607F/device.mk)
 # Inherit some common KaleidoscopeOS stuff.
 $(call inherit-product, vendor/kscope/target/product/tablet_no_telephony.mk)
 
-# Switch to Lawnchair if exist
-$(call inherit-product-if-exists, vendor/lawnchair/lawnchair.mk)
+# Switch to Lawnchair
+$(call inherit-product, vendor/lawnchair/lawnchair.mk)
 
 DEVICE_MAINTAINER := bigsaltyfishes
 
