@@ -14,6 +14,9 @@ $(call inherit-product, device/lenovo/J607F/device.mk)
 # Inherit some common ArrowOS stuff.
 $(call inherit-product, vendor/arrow/config/common.mk)
 
+# Switch to Lawnchair
+$(call inherit-product, vendor/lawnchair/lawnchair.mk)
+
 # Enable 2-Pane Layout
 PRODUCT_PACKAGES += \
 	androidx.window.extensions
