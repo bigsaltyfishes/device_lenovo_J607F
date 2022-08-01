@@ -1,2 +1,3 @@
-allow vendor_hvdcp sysfs:file getattr;
+allow vendor_hvdcp sysfs:file { getattr read write };
+allow vendor_hvdcp kmsg_device:chr_file { getattr write };
 r_dir_file(vendor_hvdcp, sysfs_batteryinfo)
