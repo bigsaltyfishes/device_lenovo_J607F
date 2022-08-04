@@ -18,6 +18,9 @@ debug.sf.latch_unsignaled=1
 # DRM
 drm.service.enabled=true
 
+# FUSE passthrough
+persist.sys.fuse.passthrough.enable=true
+
 # GPS
 persist.backup.ntpServer="0.pool.ntp.org"
 
