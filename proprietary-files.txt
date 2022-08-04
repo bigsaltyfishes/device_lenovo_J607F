@@ -686,19 +686,19 @@ vendor/lib64/libdlbdsservice.so|77e3a0d44ce95c7e5139badb94087ea58211b022
 vendor/lib64/vendor.dolby.hardware.dms@1.0-impl.so|7afb6907a83aa7c9faa7308ae5b39338eadac1c8
 vendor/lib64/vendor.dolby.hardware.dms@1.0.so|f3593ce869d036f98ddc7fc8223a8b55dcf0ca36
 
-# Display (Prebuilt)
-vendor/bin/hw/vendor.qti.hardware.display.composer-service
-vendor/etc/init/vendor.qti.hardware.display.composer-service.rc
--vendor/etc/vintf/manifest/vendor.qti.hardware.display.composer-service.xml
-vendor/lib64/libdisplaydebug.so
-vendor/lib64/libdrm.so
-vendor/lib64/libdrmutils.so
-vendor/lib64/libgpu_tonemapper.so
-vendor/lib64/libqdutils.so
-vendor/lib64/libqservice.so
-vendor/lib64/libsdedrm.so
-vendor/lib64/libsdmcore.so
-vendor/lib64/libsdmutils.so
+# Display (Prebuilt) - from TB-J607Z_S510039_220325_ROW
+vendor/bin/hw/vendor.qti.hardware.display.composer-service|4514f945ef7fc95d8744149c5d4ce593cd6284ac
+vendor/etc/init/vendor.qti.hardware.display.composer-service.rc|a3eba2a9d34285d2fce0d0f774684604644ffb9e
+-vendor/etc/vintf/manifest/vendor.qti.hardware.display.composer-service.xml|8687b6af9c705287541058e47431d1cc3b38f9ec
+vendor/lib64/libdisplaydebug.so|1917da59489075f5a943d5807fb777cea8029af8
+vendor/lib64/libdrm.so|73acc71c0ee181940f26947c8811365038e4dce4
+vendor/lib64/libdrmutils.so|f228057763bab223353eb111a5e2688c1bb99572
+vendor/lib64/libgpu_tonemapper.so|09950193e993b5b307b41d37f7abf4682d827ee0
+vendor/lib64/libqdutils.so|a86dc4ee4c03280d30ff5f06240d3bb913eb657b
+vendor/lib64/libqservice.so|2c0d26edd6798e5834ae64e2e7241c9ce964329f
+vendor/lib64/libsdedrm.so|f7e85f03aa394b58dd5d77c5bc42e6820e0b7217
+vendor/lib64/libsdmcore.so|7b4f7e9e87c5127e1112e475759dcdceaca3b630
+vendor/lib64/libsdmutils.so|b33c2f52d7116ec78001111accac5fbb69cd68ee
 
 # Display-calibration
 vendor/etc/qdcm_calib_data_himax_boe_video_mode_dsi_panel.xml
@@ -729,30 +729,19 @@ vendor/etc/qdcm_calib_data_sw43404_amoled_video_mode_dsi_boe_panel_with_DSC.xml
 vendor/etc/qdcm_calib_data_td4330_v2_cmd_mode_dsi_truly_panel.xml
 vendor/etc/qdcm_calib_data_td4330_v2_video_mode_dsi_truly_panel.xml
 
-# Display Postprocessing
-vendor/bin/hw/vendor.display.color@1.0-service
-vendor/bin/ppd
-vendor/etc/init/vendor.display.color@1.0-service.rc
-vendor/lib/libdisp-aba.so
-vendor/lib/libdisplayqos.so
-vendor/lib/libdpps.so
-vendor/lib/vendor.display.color@1.0.so
-vendor/lib/vendor.display.color@1.1.so
-vendor/lib/vendor.display.color@1.2.so
-vendor/lib/vendor.display.color@1.3.so
-vendor/lib/vendor.display.color@1.4.so
-vendor/lib/vendor.display.color@1.5.so
-vendor/lib/vendor.display.postproc@1.0.so
-vendor/lib64/libdisp-aba.so
-vendor/lib64/libdisplayqos.so
-vendor/lib64/libdpps.so
-vendor/lib64/vendor.display.color@1.0.so
-vendor/lib64/vendor.display.color@1.1.so
-vendor/lib64/vendor.display.color@1.2.so
-vendor/lib64/vendor.display.color@1.3.so
-vendor/lib64/vendor.display.color@1.4.so
-vendor/lib64/vendor.display.color@1.5.so
-vendor/lib64/vendor.display.postproc@1.0.so
+# Display Postprocessing - from TB-J607Z_S510039_220325_ROW
+vendor/bin/hw/vendor.display.color@1.0-service|9c77c3655befc1c53f842e1b9605b83e3dc64259
+vendor/bin/ppd|c95374a5c5efb911f9bb954a2defda0f34b869fc
+vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
+vendor/lib64/libdisp-aba.so|902839da31464e54bd4756747db2dd7ad867484f
+vendor/lib64/libdpps.so|b70aaf5b43c64863d83d039e848e282cd801d7fd
+vendor/lib64/vendor.display.color@1.0.so|b52e5dc3e2905595a91c7d3536a1803d6da9ec08
+vendor/lib64/vendor.display.color@1.1.so|c456489b81c4e8a77e28ab2377df55c6d0b2034e
+vendor/lib64/vendor.display.color@1.2.so|4a70eacc1587712bc33e8481d0cdb04be0f1da8d
+vendor/lib64/vendor.display.color@1.3.so|52b3eb1dc930ba242a816b7b0d1964a27911046e
+vendor/lib64/vendor.display.color@1.4.so|83114673045ecf5c55c65e5ed822f244637ed7b3
+vendor/lib64/vendor.display.color@1.5.so|3c818c27dacc694f4a219c936d0db6b99093faf1
+vendor/lib64/vendor.display.postproc@1.0.so|3b9d7512bf3897df788a49348b3f04ace63640d9
 
 # DPM
 framework/tcmclient.jar
@@ -926,64 +915,70 @@ vendor/lib64/vendor.qti.gnss@4.0-service.so
 vendor/lib64/vendor.qti.gnss@4.0.so
 vendor/lib64/vendor.qti.hardware.cacert@1.0.so
 
-# Graphics
--vendor/app/com.qualcomm.qti.gpudrivers.lito.api30/com.qualcomm.qti.gpudrivers.lito.api30.apk;PRESIGNED
-vendor/lib/egl/eglSubDriverAndroid.so
-vendor/lib/egl/libEGL_adreno.so
-vendor/lib/egl/libGLESv1_CM_adreno.so
-vendor/lib/egl/libGLESv2_adreno.so
-vendor/lib/egl/libq3dtools_adreno.so
-vendor/lib/egl/libq3dtools_esx.so
-vendor/lib/libadreno_utils.so
-vendor/lib/libC2D2.so
-vendor/lib/libc2d30_bltlib.so
-vendor/lib/libCB.so
-vendor/lib/libgpudataproducer.so
-vendor/lib/libgsl.so
-vendor/lib/libllvm-glnext.so
-vendor/lib/libllvm-qcom.so
-vendor/lib/libOpenCL.so
-vendor/lib/libadreno_app_profiles.so
-vendor/lib/libVkLayer_q3dtools.so
-vendor/lib/libpvr.so
-vendor/lib64/libadreno_app_profiles.so
-vendor/lib64/libpvr.so
-vendor/lib64/egl/eglSubDriverAndroid.so
-vendor/lib64/egl/libEGL_adreno.so
-vendor/lib64/egl/libGLESv1_CM_adreno.so
-vendor/lib64/egl/libGLESv2_adreno.so
-vendor/lib64/egl/libq3dtools_adreno.so
-vendor/lib64/egl/libq3dtools_esx.so
-vendor/lib64/libadreno_utils.so
-vendor/lib64/libC2D2.so
-vendor/lib64/libc2d30_bltlib.so
-vendor/lib64/libCB.so
-vendor/lib64/libgpudataproducer.so
-vendor/lib64/libgsl.so
-vendor/lib64/libllvm-glnext.so
-vendor/lib64/libllvm-qcom.so
-vendor/lib64/libOpenCL.so
-vendor/lib64/libVkLayer_q3dtools.so
+# Graphics - from TB-J607Z_S510039_220325_ROW
+-vendor/app/com.qualcomm.qti.gpudrivers.lito.api30/com.qualcomm.qti.gpudrivers.lito.api30.apk;PRESIGNED|687e8f81fe3960641d149a1958acd6b701cf8c27
+vendor/lib64/libadreno_app_profiles.so|52082e4bfb13cb2df5eb09a18b67c249aeb56b58
+vendor/lib64/libpvr.so|753c8707161fb209de3d9b3e3b6db8b4645e9e91
+vendor/lib/libadreno_app_profiles.so|824b966d93305b8cbb0594374229bde1198a41d9
+vendor/lib/libpvr.so|824f4be34325d43b80620988e6fd358a770cc01d
 
-# Graphics (HDR)
-vendor/lib64/libhdr_tm.so
+# Graphics - from TB-J607Z_S510039_220325_ROW
+vendor/lib64/egl/eglSubDriverAndroid.so|0e0c4a1d9462c15e2b14d03b66bed51e85bd9e27
+vendor/lib64/egl/libEGL_adreno.so|a11a970b9621bb08ab6b8f60abb12c55b12ee55a
+vendor/lib64/egl/libGLESv1_CM_adreno.so|d22773a61614ac71cf68d874db66bbe7739761ce
+vendor/lib64/egl/libGLESv2_adreno.so|a029852da3c8c91dfa2594435ea8217b1bc19808
+vendor/lib64/egl/libq3dtools_adreno.so|bbd2bdeb3d27461742b10490dc4d3f45379f276d
+vendor/lib64/egl/libq3dtools_esx.so|214a1fc578b87d536ef01a3757a8568ccb6e5141
+vendor/lib64/libadreno_utils.so|0f7fe7adab6bb32a45dab72c1539d797656f742f
+vendor/lib64/libC2D2.so|2f5bb4e82006bcc854aa468126bd3fffab339f67
+vendor/lib64/libc2d30_bltlib.so|6dfc4b3393a83113a91e2a3d8c2e4e58a62636dc
+vendor/lib64/libCB.so|ad202e7723660975a1a0b3bda0250a738232c82f
+vendor/lib64/libgpudataproducer.so|a6afca47d565f17ac683e0ffd16a5f8f9c416702
+vendor/lib64/libgsl.so|452e931bdb8ef68cc8ed99367fa03edec2811654
+vendor/lib64/libllvm-glnext.so|4d4f9cac21256aae17af91e473eb142be99183ff
+vendor/lib64/libllvm-qcom.so|7b470265d6cb64b73fef276ffa7ccaef61150f1e
+vendor/lib64/libOpenCL.so|ce96cb481976251b309fed436c28935bad5f3e64
+vendor/lib64/libVkLayer_q3dtools.so|23c379c269446a5cd932e4a5e73188582034dcf0
+vendor/lib/egl/eglSubDriverAndroid.so|1a1c287a32095bede1cd199594cb7fb89c1c15d0
+vendor/lib/egl/libEGL_adreno.so|4ee434ffeab2568d7187635adae39106ca6163bb
+vendor/lib/egl/libGLESv1_CM_adreno.so|64b58204e029c848e35f50ad163952db497ea90f
+vendor/lib/egl/libGLESv2_adreno.so|d25f258304126d8154665753d7feda809483a18f
+vendor/lib/egl/libq3dtools_adreno.so|e50851c6d93051fec5cb6b3314edf0791a539b0d
+vendor/lib/egl/libq3dtools_esx.so|a1d7931b78af3304d6b2a9381aae0495349fe00c
+vendor/lib/libadreno_utils.so|a9da660ef20638f93539709b98b871eae798e4c1
+vendor/lib/libC2D2.so|c1916f2adb917f3567b872670496994456472586
+vendor/lib/libc2d30_bltlib.so|90766895641fbda817bb2818a0538cb66be62d8b
+vendor/lib/libCB.so|cda81be18fb14860417ba9d9148f81f4b5f9d275
+vendor/lib/libgpudataproducer.so|ddbe807073a2c94055153cb86cf2ae538c64390e
+vendor/lib/libgsl.so|27f9ad0bdb828a8cf4a5ca6852b0454445bdbd45
+vendor/lib/libllvm-glnext.so|73cb960c3fa2f01d60b65221c9ec7336c773c4e8
+vendor/lib/libllvm-qcom.so|7ea74959fc794353acc17d3fe3e749ec274b8907
+vendor/lib/libOpenCL.so|be3067845af3b7d49ce2fcdd99625e4cd8276f09
+vendor/lib/libVkLayer_q3dtools.so|4db230b110bf40180788ef548bc8a20848510ed3
 
-# Graphics (SDM)
-vendor/lib64/libdisplayskuutils.so
-vendor/lib64/libqseed3.so
-vendor/lib64/libsdm-color.so
-vendor/lib64/libsdm-colormgr-algo.so
-vendor/lib64/libsdm-diag.so
-vendor/lib64/libsdm-disp-vndapis.so
-vendor/lib64/libsdmextension.so
-vendor/lib64/libtinyxml2_1.so
+# Graphics (HDR) - from TB-J607Z_S510039_220325_ROW
+vendor/lib64/libhdr_tm.so|4be3cfff1ef40cbc6ad329b79c60881263aa6723
 
-# Graphics (Vulkan)
-vendor/lib/hw/vulkan.adreno.so
-vendor/lib64/hw/vulkan.adreno.so
+# Graphics (SDM) - from TB-J607Z_S510039_220325_ROW
+vendor/lib64/libdisplayqos.so|56cfe5471e5c282ac83a31e5b155342ade8c08d0
+vendor/lib64/libdisplayskuutils.so|3ddb2ffe55aa9aef686cf3be00ae5e0d1d8f9d93
+vendor/lib64/libhdrdynamic.so|917095388aaa80685fadcf10e414ff1261350aef
+vendor/lib64/libhdrdynamicootf.so|4bd09dd4a48176b18a64cfa14faacbe22a43366f
+vendor/lib64/libqseed3.so|c9fb729cf48278d0c87d27c0af17ae3a8ccb1bf7
+vendor/lib64/libsdm-color.so|b153b110d1f60e4e759506a72f35312dc0bac25d
+vendor/lib64/libsdm-colormgr-algo.so|1fb7f3cb11557bbf677afb5d6eda0e4e9fd3ac58
+vendor/lib64/libsdm-diag.so|f1228c94babeba1b24606f92844fd57a8b259a33
+vendor/lib64/libsdm-disp-vndapis.so|fd0b0beac164c92bfa012dbc059cb50cdde2dec6
+vendor/lib64/libsdmextension.so|54fd1be1437dbe381ff9dd7d31487befea352c07
+vendor/lib64/libtinyxml2_1.so|fb0a2b16e5cfd28515268edc5c2345190d1ef4e5
+
+# Graphics (Vulkan) - from TB-J607Z_S510039_220325_ROW
+vendor/lib/hw/vulkan.adreno.so|6783a9decb9197f65965770724843feeff82fd31
+vendor/lib64/hw/vulkan.adreno.so|37e06c3ae88dbe9d08a301b2a2120370a22241c4
 
 # Graphics (Vulkan Overlays) - from redfin-user-12-S3B1.220318.003-8372304-release-keys
 -vendor/app/gpu_profiling_vulkan_layer/gpu_profiling_vulkan_layer.apk;PRESIGNED|04ba24133e226aacf0108e5700bbbb02521729c8
+
 # IOP
 vendor/bin/hw/vendor.qti.hardware.iop@2.0-service
 vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc
@@ -1813,13 +1808,8 @@ system_ext/framework/vendor.qti.data.factory-V2.1-java.jar
 -system_ext/lib64/libsdm-disp-apis.qti.so
 vendor/bin/qdcmss
 vendor/etc/init/qdcmss.rc
-vendor/lib/libdisplayskuutils.so
 vendor/lib/libsdedrm.so
-vendor/lib/libsdm-colormgr-algo.so
--vendor/lib/libsdm-disp-vndapis.so
-vendor/lib/libsdmextension.so
 vendor/lib/unnhal-acc-hta.so
--vendor/lib64/libsdm-disp-vndapis.so
 vendor/lib/libcpion.so
 vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so
@@ -1838,11 +1828,6 @@ vendor/lib64/libasn1crt.so
 vendor/lib64/libasn1crtx.so
 -vendor/lib64/liblbs_core.so
 -vendor/lib64/libloc_api_v02.so
-vendor/lib/libhdr_tm.so
-vendor/lib/libqseed3.so
-vendor/lib/libsdm-color.so
-vendor/lib/libsdm-diag.so
-vendor/lib/libtinyxml2_1.so
 system_ext/framework/vendor.qti.hardware.data.latency-V1.0-java.jar
 system_ext/framework/vendor.qti.latency-V2.0-java.jar
 vendor/lib/libqcbor.so
