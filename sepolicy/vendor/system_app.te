@@ -8,6 +8,8 @@ allow system_app sysfs_zram:file r_file_perms;
 
 allow system_app zygote:unix_stream_socket { getopt };
 
+allow system_app proc_pagetypeinfo:file r_file_perms;
+
 # FM Radio
 get_prop(system_app, vendor_fm_prop)
 
