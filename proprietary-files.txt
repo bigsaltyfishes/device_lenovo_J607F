@@ -780,49 +780,51 @@ vendor/lib/libdpmqmihal.so
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
 vendor/lib64/libdpmqmihal.so
 
-# DRM
-vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service
-vendor/bin/qseecomd
-vendor/etc/init/qseecomd.rc
-vendor/etc/gpfspath_oem_config.xml
-vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc
-vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so
-vendor/lib64/libcpion.so
-vendor/lib64/libdrmfs.so
-vendor/lib64/libdrmtime.so
-vendor/lib64/libGPreqcancel_svc.so
-vendor/lib64/libGPreqcancel.so
-vendor/lib64/libqisl.so
-vendor/lib64/libQSEEComAPI.so
-vendor/lib64/librpmb.so
-vendor/lib64/libsecureui_svcsock.so
-vendor/lib64/libsecureui.so
-vendor/lib64/libSecureUILib.so
-vendor/lib64/libssd.so
-vendor/lib64/libStDrvInt.so
-vendor/lib64/libtzdrmgenprov.so
-vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
+# DRM - from TB-J607Z_S510039_220325_ROW
+vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service|d3d6ed383483747f8bec574adcac1c24ef1ac3a4
+vendor/bin/qseecomd|938f1c7fccbaf0cf5df4cbe93ae51e225a252dfe
+vendor/etc/init/qseecomd.rc|0ebfb7c5d1d2459be4fdac951a182dc486f3bda7
+vendor/etc/gpfspath_oem_config.xml|7aeade35b0bbe27530f6aca8c1ed5192a7acf59d
+vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc|0f43244d70d5efc1e4f089b926a9dc4f59e53db1
+vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so|91188a4f79514d6e103336a29acac94e2085b8db
+vendor/lib64/libcpion.so|25691ffcf8d0ab45709e968d3f14904853e58459
+vendor/lib64/libdrmfs.so|fbc5822ec1add82eed173b5c35646656a801988c
+vendor/lib64/libdrmtime.so|47c8d24de305a2979d17c547adf419344a55e713
+vendor/lib64/libGPreqcancel_svc.so|4874271836b1d816d5eb384d89f874ee060e1a45
+vendor/lib64/libGPreqcancel.so|b9efbc8623981e1249ad0a0f8964b2b655d2b334
+vendor/lib64/libops.so|09ef77804b57cdff895e4dbce989a1903aa58b32
+vendor/lib64/libqisl.so|c79719eebc094c2af9561e8df2c158638b111b70
+vendor/lib64/libQSEEComAPI.so|550846778dd959632741d7fdc7d3b1aeddde45b0
+vendor/lib64/librpmb.so|18dfedfff98be671df951a21f5ebeb14fc3239b8
+vendor/lib64/libsecureui_svcsock.so|2232f56927964f10d41868919d94711930d50ed0
+vendor/lib64/libsecureui.so|5907f9142ccb8a864a7c8d1805b0018712542786
+vendor/lib64/libSecureUILib.so|b2acddbda63e9c3134845c3aa9174296cb1bea37
+vendor/lib64/libssd.so|cec38661af5bdb17c38d8a91a8a04c7efc9570bd
+vendor/lib64/libStDrvInt.so|a166aeaeaeb70f12bc607ff7852e039ee5cb004f
+vendor/lib64/libtzdrmgenprov.so|ba946226e4fd07a4324324f5343ee66fae27da6e
+vendor/lib64/vendor.qti.hardware.qseecom@1.0.so|b309e18174d46e30459a1ffbafd641c9752d3a25
 
 # DRM - from Coral - 12/SQ1A.220105.002/7961164
-vendor/lib64/libops.so|3c763226ccc3b0f32e131af71a458b41bf2b3d8d
 vendor/lib64/libspl.so|f8bbe0322ce06a545f5dc79c888183ac61673b68
 
-# DRM (Widevine)
-vendor/bin/hw/android.hardware.drm@1.3-service.widevine
-vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
--vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
-vendor/lib/libbase64.so
-vendor/lib/libcppf.so
-vendor/lib/libtrustedapploader.so
-vendor/lib/mediadrm/libdrmclearkeyplugin.so
-vendor/lib64/libbase64.so
-vendor/lib64/libtrustedapploader.so
-vendor/lib64/libwvhidl.so
-vendor/lib64/mediadrm/libdrmclearkeyplugin.so
+# DRM (Widevine) - from TB-J607Z_S510039_220325_ROW
+vendor/bin/hw/android.hardware.drm@1.3-service.widevine|86be775bb92aab1166c5292300e48b16b0ba156d
+vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc|c35e1a6f9a6faff19064a81e07c4be82ceaf4bb5
+-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml|ebebcf8f367641480cf7d512fc06e6ab777527be
+vendor/lib/libbase64.so|75d865f65083d4aab7bc70749407bf3430c10a02
+vendor/lib/libcppf.so|5b93b4bafa7475c3b47c7c10ee8d303a2b15f919
+vendor/lib/libtrustedapploader.so|3d917acae6426f26d38e6aacd21e55b67b42e4d4
+vendor/lib/mediadrm/libdrmclearkeyplugin.so|db1a31e7f56201aef87b2c1b29c29480f027d9b9
+vendor/lib64/libbase64.so|00cb0376d2c559215ea5a5e7a29d7fd9c1211870
+vendor/lib64/libtrustedapploader.so|030366cf9b29f9beacea371f1c2a8781664be851
+vendor/lib64/mediadrm/libdrmclearkeyplugin.so|a9e37d481b963ecf5bed227ab4e9b82c44b868a4
 
-# DRM (Widevine L1)
-vendor/lib/liboemcrypto.so
-vendor/lib64/liboemcrypto.so
+# DRM (Widevine)
+vendor/lib64/libwvhidl.so
+
+# DRM (Widevine L1) - from TB-J607Z_S510039_220325_ROW
+vendor/lib/liboemcrypto.so|31016f4a6606e5faf116c92fcf659d5c07328d9a
+vendor/lib64/liboemcrypto.so|e9db0fbebaa8ac3644746c10aa69e35efe2fe322
 
 # ESE
 vendor/bin/hw/vendor.qti.esepowermanager@1.1-service
@@ -1709,27 +1711,27 @@ vendor/lib64/libssc.so
 vendor/lib64/libssc_default_listener.so
 vendor/lib64/sensors.ssc.so
 
-# Snapdragon Computer Vision Engine
-vendor/lib/libfastcvdsp_stub.so
--vendor/lib/libfastcvopt.so
-vendor/lib/libscveCommon_stub.so
-vendor/lib/libscveCommon.so
-vendor/lib/libscveObjectSegmentation_stub.so
-vendor/lib/libscveObjectSegmentation.so
-vendor/lib/libscveObjectTracker_stub.so
-vendor/lib/libscveObjectTracker.so
-vendor/lib/vendor.qti.hardware.scve.objecttracker@1.0.so
-vendor/lib/vendor.qti.hardware.scve.panorama@1.0.so
-vendor/lib64/libfastcvdsp_stub.so
--vendor/lib64/libfastcvopt.so
-vendor/lib64/libscveCommon_stub.so
-vendor/lib64/libscveCommon.so
-vendor/lib64/libscveObjectSegmentation_stub.so
-vendor/lib64/libscveObjectSegmentation.so
-vendor/lib64/libscveObjectTracker_stub.so
-vendor/lib64/libscveObjectTracker.so
-vendor/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so
-vendor/lib64/vendor.qti.hardware.scve.panorama@1.0.so
+# Snapdragon Computer Vision Engine - from TB-J607Z_S510039_220325_ROW
+vendor/lib64/libfastcvdsp_stub.so|9813b36faa8029bdb358126c2996207fc7704d32
+-vendor/lib64/libfastcvopt.so|0796b9092eb285d7689a8e6c4478a88a1d7e6e87
+vendor/lib64/libscveCommon.so|237b6432dfb9d7b6ac5d5522591db0972755bb5b
+vendor/lib64/libscveCommon_stub.so|bb5dc4c59d04e35020f4422ae3e19c8cfd0d1537
+vendor/lib64/libscveObjectSegmentation.so|2fea995b4481d61dd1076fd429cef03f726a3f28
+vendor/lib64/libscveObjectSegmentation_stub.so|f30ce4dd4197732dce83e7df6474794abc7b7a26
+vendor/lib64/libscveObjectTracker.so|2c9195e1874ba598135ffec0246648e891fc4e3d
+vendor/lib64/libscveObjectTracker_stub.so|62db08e185e915fe975e5234d1ce1d749e6e9750
+vendor/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so|68eb0f6c27f6b32c762a7738335f577776aa1d17
+vendor/lib64/vendor.qti.hardware.scve.panorama@1.0.so|9dff12cf420dde772aa7d525bc3c7f728f20c44d
+vendor/lib/libfastcvdsp_stub.so|7f27cee24281bc9bf4f08c6100cc66bd650d8efb
+-vendor/lib/libfastcvopt.so|eb6e1052f12b45f2f651f1437e6072459648f2f3
+vendor/lib/libscveCommon.so|4be56b846f71f4ba8032471abf9f02dc5b01810c
+vendor/lib/libscveCommon_stub.so|89e1a3d3302b6809ae4ca1d80f6c2e0cd3c3b752
+vendor/lib/libscveObjectSegmentation.so|b60b43377262ef6cc7882ff5cc49d35e4c516670
+vendor/lib/libscveObjectSegmentation_stub.so|f1a139933c16c2fde367506fe0419c15684a2d3c
+vendor/lib/libscveObjectTracker.so|26318c862d3d56596fe7208ebcc3ae1900f7d55f
+vendor/lib/libscveObjectTracker_stub.so|cafdeed8fa0d51672806038065cf4ce38d442b6b
+vendor/lib/vendor.qti.hardware.scve.objecttracker@1.0.so|31e8070b4c4eb22c41c62cd7e25d0ad29d021bb3
+vendor/lib/vendor.qti.hardware.scve.panorama@1.0.so|2271a462c1c0c887681f673d4062827dc0093ab0
 
 # Soter
 -system/app/SoterService/SoterService.apk|190f9d38c5a7323a3dc012c362f1e0873cb4db20
