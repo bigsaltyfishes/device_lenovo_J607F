@@ -695,18 +695,10 @@ vendor/etc/init/qdcmss.rc
 -system_ext/lib64/libsdm-disp-apis.qti.so
 
 # Display (Prebuilt) - from TB-J607Z_S510039_220325_ROW
-vendor/bin/hw/vendor.qti.hardware.display.composer-service|4514f945ef7fc95d8744149c5d4ce593cd6284ac
-vendor/etc/init/vendor.qti.hardware.display.composer-service.rc|a3eba2a9d34285d2fce0d0f774684604644ffb9e
--vendor/etc/vintf/manifest/vendor.qti.hardware.display.composer-service.xml|8687b6af9c705287541058e47431d1cc3b38f9ec
 vendor/lib64/libdisplaydebug.so|1917da59489075f5a943d5807fb777cea8029af8
 vendor/lib64/libdrm.so|73acc71c0ee181940f26947c8811365038e4dce4
-vendor/lib64/libdrmutils.so|f228057763bab223353eb111a5e2688c1bb99572
 vendor/lib64/libgpu_tonemapper.so|09950193e993b5b307b41d37f7abf4682d827ee0
-vendor/lib64/libqdutils.so|a86dc4ee4c03280d30ff5f06240d3bb913eb657b
 vendor/lib64/libqservice.so|2c0d26edd6798e5834ae64e2e7241c9ce964329f
-vendor/lib64/libsdedrm.so|f7e85f03aa394b58dd5d77c5bc42e6820e0b7217
-vendor/lib64/libsdmcore.so|7b4f7e9e87c5127e1112e475759dcdceaca3b630
-vendor/lib64/libsdmutils.so|b33c2f52d7116ec78001111accac5fbb69cd68ee
 
 # Display-calibration
 vendor/etc/qdcm_calib_data_himax_boe_video_mode_dsi_panel.xml
