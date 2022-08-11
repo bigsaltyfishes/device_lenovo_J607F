@@ -75,6 +75,7 @@ debug.sf.latch_unsignaled=1
 persist.demo.hdmirotationlock=false
 persist.sys.sf.color_mode=9
 persist.sys.sf.color_saturation=1.0
+persist.sys.sf.native_mode=2
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
 ro.opengles.version=196610
@@ -89,6 +90,8 @@ vendor.display.enable_optimize_refresh=1
 vendor.display.enable_perf_hint_large_comp_cycle=1
 vendor.display.enable_posted_start_dyn=1
 vendor.display.use_smooth_motion=1
+vendor.display.qdcm.disable_factory_mode=1
+vendor.display.qdcm.mode_combine=1
 vendor.gralloc.disable_ubwc=0
 
 # Display (Phase Offsets)
@@ -162,6 +165,13 @@ ro.radio.noril=true
 # Sensors
 persist.vendor.sensors.allow_non_default_discovery=true
 persist.vendor.sensors.debug.ssc_qmi_debug=true
+
+# SoC
+ro.soc.manufacturer=Qualcomm
+ro.soc.model=SM7225
+
+# Time
+persist.timed.enable=true
 
 # USB
 vendor.usb.diag.func.name=diag
