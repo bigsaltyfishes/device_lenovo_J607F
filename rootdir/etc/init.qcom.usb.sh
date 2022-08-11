@@ -1,5 +1,5 @@
 #!/vendor/bin/sh
-# Copyright (c) 2012-2018, 2020 The Linux Foundation. All rights reserved.
+# Copyright (c) 2012-2018, 2020-2021 The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -47,8 +47,14 @@ target=`getprop ro.board.platform`
 # Override USB default composition
 #
 # If USB persist config not set, set default configuration
-if [ "$(getprop persist.vendor.usb.config)" == "" -a "$(getprop ro.build.type)" != "user" -a \
-	"$(getprop init.svc.vendor.usb-gadget-hal-1-0)" != "running" ]; then
+#----------------begin shoufeng.zhang and 2021-05-12, ffbm for user.----------------------------
+#Original code here
+#if  [ "$(getprop persist.vendor.usb.config)" == "" -a "$(getprop ro.build.type)" != "user" -a \
+#	"$(getprop init.svc.vendor.usb-gadget-hal-1-0)" != "running" ]; then
+#Modifed code here
+if  [ "$(getprop persist.vendor.usb.config)" == "" -a "$(getprop init.svc.vendor.usb-gadget-hal-1-0)" != "running" ]; then
+	if [ "$(getprop ro.boot.mode)" == "ffbm-01" -o "$(getprop ro.boot.mode)" == "ffbm-00" -o "$(getprop ro.boot.mode)" == "ffbm-02" -o "$(getprop ro.build.type)" != "user" ]; then
+#-----------------end shoufeng.zhang and 2021-05-12---------------------------------------------
     if [ "$esoc_name" != "" ]; then
 	  setprop persist.vendor.usb.config diag,diag_mdm,qdss,qdss_mdm,serial_cdev,dpl,rmnet,adb
     else
@@ -95,7 +101,7 @@ if [ "$(getprop persist.vendor.usb.config)" == "" -a "$(getprop ro.build.type)" 
 				      setprop persist.vendor.usb.config diag,serial_smd,rmnet_ipa,adb
 			      fi
 		      ;;
-	              "msm8998" | "sdm660" | "apq8098_latv" | "monaco")
+	              "msm8998" | "sdm660" | "apq8098_latv")
 		          setprop persist.vendor.usb.config diag,serial_cdev,rmnet,adb
 		      ;;
 	              "sdm845" | "sdm710")
@@ -103,6 +109,9 @@ if [ "$(getprop persist.vendor.usb.config)" == "" -a "$(getprop ro.build.type)" 
 		      ;;
 	              "msmnile" | "sm6150" | "trinket" | "lito" | "atoll" | "bengal" | "lahaina" | "holi")
 			  setprop persist.vendor.usb.config diag,serial_cdev,rmnet,dpl,qdss,adb
+		      ;;
+	              "monaco")
+		          setprop persist.vendor.usb.config diag,qdss,rmnet,adb
 		      ;;
 	              *)
 		          setprop persist.vendor.usb.config diag,adb
@@ -115,6 +124,9 @@ if [ "$(getprop persist.vendor.usb.config)" == "" -a "$(getprop ro.build.type)" 
 	      ;;
 	  esac
       fi
+#-------------beging shoufeng.zhang and 2021-05-12-------------------------------------------------------
+	fi
+#-------------end shoufeng.zhang and 2021-05-12----------------------------------------------------------
 fi
 
 # This check is needed for GKI 1.0 targets where QDSS is not available
@@ -141,7 +153,11 @@ esac
 if [ -d /config/usb_gadget ]; then
 	# Chip-serial is used for unique MSM identification in Product string
 	msm_serial=`cat /sys/devices/soc0/serial_number`;
-	msm_serial_hex=`printf %08X $msm_serial`
+	# If MSM serial number is not available, then keep it blank instead of 0x00000000
+	if [ "$msm_serial" != "" ]; then
+		msm_serial_hex=`printf %08X $msm_serial`
+	fi
+
 	machine_type=`cat /sys/devices/soc0/machine`
 	setprop vendor.usb.product_string "$machine_type-$soc_hwplatform _SN:$msm_serial_hex"
 
