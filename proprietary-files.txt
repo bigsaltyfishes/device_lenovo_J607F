@@ -809,10 +809,8 @@ vendor/lib/libtrustedapploader.so|3d917acae6426f26d38e6aacd21e55b67b42e4d4
 vendor/lib/mediadrm/libdrmclearkeyplugin.so|db1a31e7f56201aef87b2c1b29c29480f027d9b9
 vendor/lib64/libbase64.so|00cb0376d2c559215ea5a5e7a29d7fd9c1211870
 vendor/lib64/libtrustedapploader.so|030366cf9b29f9beacea371f1c2a8781664be851
+vendor/lib64/libwvhidl@1.3.so|beaaeab4aaeea21196778221023eb6d0c7657eb6
 vendor/lib64/mediadrm/libdrmclearkeyplugin.so|a9e37d481b963ecf5bed227ab4e9b82c44b868a4
-
-# DRM (Widevine)
-vendor/lib64/libwvhidl.so
 
 # DRM (Widevine L1) - from TB-J607Z_S510039_220325_ROW
 vendor/lib/liboemcrypto.so|31016f4a6606e5faf116c92fcf659d5c07328d9a
