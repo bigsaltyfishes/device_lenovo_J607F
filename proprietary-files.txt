@@ -1029,21 +1029,6 @@ vendor/bin/npu_launcher
 vendor/lib/libnpu.so
 vendor/lib64/libnpu.so
 
-# Media (Codec2) - from TB-J607Z_S510039_220325_ROW
-vendor/bin/hw/vendor.qti.media.c2@1.0-service|c170ebc5a0416f609186639125132b87a5650ef8
-vendor/etc/init/vendor.qti.media.c2@1.0-service.rc|11209316ba8aae64b689217bc13b0804f6620678
--vendor/etc/vintf/manifest/c2_manifest_vendor.xml|0e532bf1c7d6a0ee2e7e03a9cc3283a5bffc7f8e
-vendor/lib/libcodec2_hidl@1.0.so|cba383a64a184af78892a32fe67d57d61fc8f874
-vendor/lib/libcodec2_vndk.so|87188966af2b12c425d51ef39723bb110fa9273a
-vendor/lib/libqcodec2_base.so|5bec0dec355c90d2a9739105b6d9810291ab9995
-vendor/lib/libqcodec2_basecodec.so|a517b6a89bf54d58c46758621c6dce9056cb92f7
-vendor/lib/libqcodec2_core.so|b92991b36af312411eb4779fea1a5c22550c1d56
-vendor/lib/libqcodec2_platform.so|77f33c008a7b7c0b8f2b4c992b26c2da8e69fe24
-vendor/lib/libqcodec2_utils.so|b71f58732bd08806712ef1fb9c972f6151ea8eca
-vendor/lib/libqcodec2_v4l2codec.so|11a73149f223ecaed135fb7a0f68d0732211c177
-vendor/lib64/libcodec2_hidl@1.0.so|ccfa6dbce4c73952e5b3ab59695213ea104a4a34
-vendor/lib64/libcodec2_vndk.so|1c65db2eb46db5828454f9e20e70b34c62ebf967
-
 # Media - from TB-J607Z_S510039_220325_ROW
 system_ext/lib/libmmosal.so|ff554643ca1ac5c69f58e23b0e4769ce2653e27f
 system_ext/lib/libmmparser_lite.so|8be62ccde59f251cc8d53fe8c61fea426bda891f
