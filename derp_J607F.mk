@@ -12,7 +12,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/lenovo/J607F/device.mk)
 
 # Inherit some common ArrowOS stuff.
-$(call inherit-product, vendor/arrow/config/common.mk)
+$(call inherit-product, vendor/derp/config/common_full_tablet_wifionly.mk)
 
 # Enable 2-Pane Layout
 PRODUCT_PACKAGES += \
@@ -24,7 +24,7 @@ PRODUCT_PACKAGES += \
 DEVICE_MAINTAINER := bigsaltyfishes
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := arrow_J607F
+PRODUCT_NAME := derp_J607F
 PRODUCT_DEVICE := J607F
 PRODUCT_BRAND := Lenovo
 PRODUCT_MODEL := Lenovo TB-J607F
