@@ -20,7 +20,7 @@ android_app {
     static_libs: [
         "androidx.core_core",
         "androidx.preference_preference",
-        "org.lineageos.settings.resources",
+        "org.pixelexperience.settings.resources",
     ],
 
     optimize: {
@@ -28,15 +28,15 @@ android_app {
     },
 
     required: [
-        "privapp-permissions_org.lineageos.settings",
+        "privapp-permissions_org.pixelexperience.settings",
     ],
 
 }
 
 prebuilt_etc {
-    name: "privapp-permissions_org.lineageos.settings",
+    name: "privapp-permissions_org.pixelexperience.settings",
     system_ext_specific: true,
-    src: "privapp-permissions_org.lineageos.settings.xml",
+    src: "privapp-permissions_org.pixelexperience.settings.xml",
     sub_dir: "permissions",
     filename_from_src: true,
 

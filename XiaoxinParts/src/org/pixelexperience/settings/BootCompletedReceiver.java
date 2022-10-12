@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings;
+package org.pixelexperience.settings;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
